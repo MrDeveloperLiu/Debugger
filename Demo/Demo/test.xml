@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <class a_name = "1606D">
+        <student>
+            <name>Rose</name>
+            <age>18</age>
+            <sex>female</sex>
+        </student>
+        <student>
+            <name>Three</name>
+            <age>20</age>
+            <sex>male</sex>
+        </student>
+        <student>
+            <name>Four</name>
+            <age>33</age>
+            <sex>unkown</sex>
+        </student>
+    </class>
+    <class a_name = "1606X">
+        <student>
+            <name>Sofee</name>
+            <age>18</age>
+            <sex>female</sex>
+        </student>
+        <student>
+            <name>Hao</name>
+            <age>20</age>
+            <sex>男</sex>
+        </student>
+        <student>
+            <name>Yao</name>
+            <age>33</age>
+            <sex>unkown</sex>
+        </student>
+    </class>
+</students>
