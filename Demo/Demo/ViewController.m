@@ -39,7 +39,7 @@
         if (task.isCanceled) {
             NSLog(@"canceled: %@", error);
         }else{
-            NSLog(@"%@", [error httpErrorMessage]);
+            NSLog(@"%@", [error description]);
         }
     }];
 }

@@ -20,7 +20,7 @@
     return serializer;
 }
 
-- (NSMutableURLRequest *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(NSDictionary *)paramters error:(NSError *__autoreleasing *)error{
+- (NSMutableURLRequest *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(id)paramters error:(NSError *__autoreleasing *)error{
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     //头域
     [self HTTPRequestSerializerSetHTTPField:request];
@@ -170,7 +170,7 @@ NSString * de_urlEncodeString(NSString *string){
     return serializer;
 }
 
-- (NSMutableURLRequest *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(NSDictionary *)paramters error:(NSError *__autoreleasing *)error{
+- (NSMutableURLRequest *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(id)paramters error:(NSError *__autoreleasing *)error{
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     //头域
     [self HTTPRequestSerializerSetHTTPField:request];

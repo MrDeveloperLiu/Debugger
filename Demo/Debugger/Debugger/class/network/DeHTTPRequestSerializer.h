@@ -24,7 +24,7 @@
 @property (nonatomic, strong) NSMutableDictionary *allHTTPHeaderFields;
 @property (nonatomic, assign) NSTimeInterval timeout;
 
-- (NSMutableURLRequest *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(NSDictionary *)paramters error:(NSError **)error;
+- (NSMutableURLRequest *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(id)paramters error:(NSError **)error;
 @end
 
 @interface DeHTTPRequestSerializer (HTTPField)
