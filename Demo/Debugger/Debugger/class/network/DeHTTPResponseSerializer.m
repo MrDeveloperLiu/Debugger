@@ -8,7 +8,6 @@
 
 #import "DeHTTPResponseSerializer.h"
 
-NSString *const DeHTTPResponseSerializerError = @"DeHTTPResponseSerializerError";
 
 @implementation DeHTTPResponseSerializer
 
@@ -22,10 +21,7 @@ NSString *const DeHTTPResponseSerializerError = @"DeHTTPResponseSerializerError"
 - (id)responseObjectFromResponse:(NSURLResponse *)response data:(NSData *)data error:(NSError **)error{
     NSHTTPURLResponse *httpResp = (NSHTTPURLResponse *)response;
     if (![self.acceptContentTypes containsObject:httpResp.MIMEType]) {
-        NSString *errorMsg = [NSString stringWithFormat:@"ERROR: unsupport response MIMEType: %@!", httpResp.MIMEType];
-        *error = [NSError errorWithDomain:DeHTTPResponseSerializerError
-                                     code:-1
-                                 userInfo:@{@"msg" : errorMsg}];
+        *error = [DeHTTPInvalidResponseError errorWithResponse:response];
         return nil;
     }
     //json parser

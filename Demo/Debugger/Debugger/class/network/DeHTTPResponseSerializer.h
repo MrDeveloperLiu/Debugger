@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DeHTTPInvalidResponseError.h"
 
-FOUNDATION_EXPORT NSString *const DeHTTPResponseSerializerError;
 
 @interface DeHTTPResponseSerializer : NSObject
 

@@ -30,7 +30,6 @@
 }
 
 - (instancetype)initWithFilePath:(NSString *)filePath{
-#if DEBUG
     self = [super init];
     _format = [[NSDateFormatter alloc] init];    
     if (!filePath) {
@@ -41,7 +40,6 @@
     _format.dateFormat = @"yyyy-MM-dd HH:mm:ss.SSS";
     _handler = [NSFileHandle fileHandleForWritingAtPath:filePath];
     _fp = filePath;
-#endif
     return self;
 }
 
@@ -55,8 +53,9 @@
     }
     NSString *time = [_format stringFromDate:[NSDate date]];
     NSString *logString = [NSString stringWithFormat:@"%@ %@ %@\n", time, logLevel, text];
-    NSLog(@"DeLog: %@", logString);
-    
+#if DEBUG
+    printf("[DELOG]: %s", logString.UTF8String);
+#endif
     __weak __typeof(self) ws = self;
     NSData *logData = [logString dataUsingEncoding:NSUTF8StringEncoding];
     dispatch_sync([DeFileLogger loggerQueue], ^{

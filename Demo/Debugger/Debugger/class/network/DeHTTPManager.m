@@ -7,6 +7,7 @@
 //
 
 #import "DeHTTPManager.h"
+#import "Debugger.h"
 
 NSString *const DeHTTPManagerProcessingNotification = @"DeHTTPManager-Processing";
 NSString *const DeHTTPManagerSuccessNotification = @"DeHTTPManager-Success";
@@ -28,10 +29,32 @@ dispatch_queue_t DeHTTPManagerProcessingQueue(){
     return queue;
 }
 
+static DeReachable *deReachable = nil;
+DeReachable *DeHTTPManagerReachable() {
+    if (!deReachable) {
+        deReachable = [DeReachable reachable];
+    }
+    return deReachable;
+}
+void DeHTTPManagerReachableRelease(){
+    [deReachable stop];
+    deReachable = nil;
+}
+
 @implementation DeHTTPManager
+
++ (void)initialize{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        DeReachable *reachable = DeHTTPManagerReachable();
+        [reachable start];
+    });
+}
 
 + (DeHTTPManager *)manager{
     DeHTTPManager *manager = [[self alloc] init];
+    manager.responseSerializer = [DeHTTPResponseSerializer serializer];
+    manager.requestSerializer = [DeHTTPRequestSerializer serializer];
     return manager;
 }
 
@@ -40,14 +63,20 @@ dispatch_queue_t DeHTTPManagerProcessingQueue(){
     _network = [[DeHTTPNetwork alloc] init];
     _queue = [[NSOperationQueue alloc] init];
     _queue.maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
-    _responseSerializer = [DeHTTPResponseSerializer serializer];
-    _requestSerializer = [DeHTTPRequestSerializer serializer];
     return self;
 }
 
 - (DeHTTPOperation *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(NSDictionary *)paramters successBlock:(DeHTTPDataTaskSuccessBlock)successBlock failedBlock:(DeHTTPDataTaskFailedBlock)failedBlock{
-    __weak __typeof(self) ws = self;
+
+    DeReachable *reachable = DeHTTPManagerReachable();
+    if ([reachable notReachable]) {
+        if (failedBlock) {
+            failedBlock(nil, nil, [DeHTTPNotReachableError error]);
+        }
+        return nil;
+    }
     
+    __weak __typeof(self) ws = self;    
     NSMutableURLRequest *request = [_requestSerializer requestWithBaseUrl:url method:method paramters:paramters];
     DeHTTPOperation *operation = [[DeHTTPOperation alloc] initWithRequest:request manager:self successBlock:^(DeHTTPDataTask *task, NSURLResponse *response, id data) {
         

@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-#define DeLogInfo(format, ...) [[DeFileLogger logger] log:de_fmt_string(format, ##__VA_ARGS__)];
-
 #define DeFileLogLevelINFO      "[INFO]"
 #define DeFileLogLevelError     "[ERROR]"
 #define DeFileLogLevelNET       "[NET]"
 #define DeFileLogLevelTRACK     "[TRACK]"
+
+#define DeLogInfo(format, ...) [[DeFileLogger logger] log:de_fmt_string(format, ##__VA_ARGS__)];
+#define DeLogError(format, ...) [[DeFileLogger logger] logWithLevel:@DeFileLogLevelError text:de_fmt_string(format, ##__VA_ARGS__)];
+#define DeLogTrack [[DeFileLogger logger] logWithLevel:@DeFileLogLevelTRACK text:de_fmt_string(@"%s", __FUNCTION__)];
+
 
 @interface DeFileLogger : NSObject
 

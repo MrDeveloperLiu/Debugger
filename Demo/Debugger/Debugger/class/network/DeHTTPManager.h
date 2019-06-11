@@ -10,6 +10,7 @@
 #import "DeHTTPOperation.h"
 #import "DeHTTPResponseSerializer.h"
 #import "DeHTTPRequestSerializer.h"
+#import "DeReachable.h"
 
 FOUNDATION_EXPORT NSString *const DeHTTPManagerProcessingNotification;
 FOUNDATION_EXPORT NSString *const DeHTTPManagerSuccessNotification;
@@ -21,6 +22,9 @@ FOUNDATION_EXPORT NSString *const DeHTTPManagerUserinfoErrorKey;
 FOUNDATION_EXPORT NSString *const DeHTTPManagerUserinfoResponseKey;
 FOUNDATION_EXPORT NSString *const DeHTTPManagerUserinfoTaskKey;
 
+
+FOUNDATION_EXPORT DeReachable *DeHTTPManagerReachable(void);
+FOUNDATION_EXPORT void DeHTTPManagerReachableRelease(void);
 
 @interface DeHTTPManager : NSObject
 
