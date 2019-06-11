@@ -16,4 +16,9 @@ NSDictionary *paramters = @{@"1" : @"中文"};
 }];
 ```
 
+* XML解析器 DeSimpleXMLParaser
+
+* 代理类 DeProxy 
+
+* 日志类 DeFileLogger
 
