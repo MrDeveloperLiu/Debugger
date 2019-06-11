@@ -29,26 +29,11 @@ dispatch_queue_t DeHTTPManagerProcessingQueue(){
     return queue;
 }
 
-static DeReachable *deReachable = nil;
-DeReachable *DeHTTPManagerReachable() {
-    if (!deReachable) {
-        deReachable = [DeReachable reachable];
-    }
-    return deReachable;
-}
-void DeHTTPManagerReachableRelease(){
-    [deReachable stop];
-    deReachable = nil;
-}
-
 @implementation DeHTTPManager
 
-+ (void)initialize{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        DeReachable *reachable = DeHTTPManagerReachable();
-        [reachable start];
-    });
+- (void)dealloc{
+    _reachableBlock = nil;
+    [_queue cancelAllOperations];
 }
 
 + (DeHTTPManager *)manager{
@@ -68,8 +53,7 @@ void DeHTTPManagerReachableRelease(){
 
 - (DeHTTPOperation *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(id)paramters successBlock:(DeHTTPDataTaskSuccessBlock)successBlock failedBlock:(DeHTTPDataTaskFailedBlock)failedBlock{
 
-    DeReachable *reachable = DeHTTPManagerReachable();
-    if ([reachable notReachable]) { //无网络错误
+    if (self.reachableBlock && !self.reachableBlock()) { //无网络错误
         if (failedBlock) {
             failedBlock(nil, nil, [DeHTTPNotReachableError error]);
         }
@@ -78,7 +62,10 @@ void DeHTTPManagerReachableRelease(){
     
     __weak __typeof(self) ws = self;
     NSError *requestSerializerError = nil;
-    NSMutableURLRequest *request = [_requestSerializer requestWithBaseUrl:url method:method paramters:paramters error:&requestSerializerError];
+    NSMutableURLRequest *request = [_requestSerializer requestWithBaseUrl:url
+                                                                   method:method
+                                                                paramters:paramters
+                                                                    error:&requestSerializerError];
     if (requestSerializerError) { //请求串行器错误
         if (failedBlock) {
             failedBlock(nil, nil, requestSerializerError);
