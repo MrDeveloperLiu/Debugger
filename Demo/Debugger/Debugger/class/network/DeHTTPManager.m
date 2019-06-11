@@ -54,8 +54,7 @@ void DeHTTPManagerReachableRelease(){
 + (DeHTTPManager *)manager{
     DeHTTPManager *manager = [[self alloc] init];
     manager.responseSerializer = [DeHTTPResponseSerializer serializer];
-//    manager.requestSerializer = [DeHTTPRequestSerializer serializer];
-    manager.requestSerializer = [DeHTTPJsonRequestSerializer serializer];
+    manager.requestSerializer = [DeHTTPRequestSerializer serializer];
     return manager;
 }
 
