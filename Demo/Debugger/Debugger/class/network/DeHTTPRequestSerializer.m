@@ -8,10 +8,11 @@
 
 
 #import "DeHTTPRequestSerializer.h"
+#import "Debugger.h"
 
 @implementation DeHTTPRequestSerializer
 
-+ (DeHTTPRequestSerializer *)serializer{
++ (instancetype)serializer{
     DeHTTPRequestSerializer *serializer = [[self alloc] init];
     serializer.urlEncodingParametersInURI = [NSSet setWithObjects:@"GET", @"HEAD", @"DELETE", nil];
     [serializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:kHTTPContentType];
@@ -19,10 +20,10 @@
     return serializer;
 }
 
-- (NSMutableURLRequest *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(NSDictionary *)paramters{
+- (NSMutableURLRequest *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(NSDictionary *)paramters error:(NSError *__autoreleasing *)error{
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     //头域
-    request.allHTTPHeaderFields = _allHTTPHeaderFields;
+    [self HTTPRequestSerializerSetHTTPField:request];
     if (method) {//方式
         request.HTTPMethod = method;
     }
@@ -35,7 +36,7 @@
             request.HTTPBody = [bodyString dataUsingEncoding:NSUTF8StringEncoding];
         }
     }
-    request.timeoutInterval = _timeout;
+    request.timeoutInterval = self.timeout;
     return request;
 }
 
@@ -50,12 +51,6 @@
     }
 }
 
-- (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field{
-    if (field) {
-        self.allHTTPHeaderFields[field] = value;
-    }
-}
-
 - (NSMutableDictionary *)allHTTPHeaderFields{
     if (!_allHTTPHeaderFields) {
         _allHTTPHeaderFields = [NSMutableDictionary dictionary];
@@ -63,8 +58,32 @@
     return _allHTTPHeaderFields;
 }
 
-
 @end
+
+@implementation DeHTTPRequestSerializer (HTTPField)
+- (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field{
+    if (field) {
+        self.allHTTPHeaderFields[field] = value;
+    }
+}
+
+- (void)HTTPRequestSerializerSetHTTPField:(NSMutableURLRequest *)request{
+    if (!self.allHTTPHeaderFields) {
+        return;
+    }
+    NSMutableDictionary *allHeaderField = @{}.mutableCopy;
+    if (request.allHTTPHeaderFields) {
+        [allHeaderField addEntriesFromDictionary:request.allHTTPHeaderFields];
+    }
+    [self.allHTTPHeaderFields enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        if (![allHeaderField objectForKey:key]) {
+            [allHeaderField setObject:obj forKey:key];
+        }
+    }];
+    request.allHTTPHeaderFields = allHeaderField;
+}
+@end
+
 
 @implementation DeHTTPRequestParamterPairs
 + (instancetype)pairsWithKey:(NSString *)key value:(NSString *)value{
@@ -141,3 +160,32 @@ NSString * de_urlEncodeString(NSString *string){
     return encoded;
 }
 
+
+@implementation DeHTTPJsonRequestSerializer
++ (instancetype)serializer{
+    DeHTTPJsonRequestSerializer *serializer = [[self alloc] init];
+    [serializer setValue:@"application/json" forHTTPHeaderField:kHTTPContentType];
+    serializer.writingOptions = 0;
+    serializer.timeout = 30;
+    return serializer;
+}
+
+- (NSMutableURLRequest *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(NSDictionary *)paramters error:(NSError *__autoreleasing *)error{
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    //头域
+    [self HTTPRequestSerializerSetHTTPField:request];
+    if (method) {//方式
+        request.HTTPMethod = method;
+    }
+    if (paramters) {
+        if ([NSJSONSerialization isValidJSONObject:paramters]) {
+            request.HTTPBody = [NSJSONSerialization dataWithJSONObject:paramters options:self.writingOptions error:error];
+        }else{
+            *error = [DeHTTPJsonInvalidParamterError errorWithParamters:paramters];
+        }
+    }
+    request.timeoutInterval = self.timeout;
+    return request;
+}
+
+@end

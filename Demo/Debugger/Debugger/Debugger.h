@@ -27,7 +27,14 @@ FOUNDATION_EXPORT const unsigned char DebuggerVersionString[];
 #import <Debugger/DeHTTPManager.h>
 #import <Debugger/DeHTTPResponseSerializer.h>
 #import <Debugger/DeHTTPRequestSerializer.h>
+#import <Debugger/NSError+DeErrorMsg.h>
+
+#import <Debugger/DeHTTPNotReachableError.h>
+#import <Debugger/DeHTTPInvalidResponseError.h>
+#import <Debugger/DeHTTPJsonInvalidParamterError.h>
 
 #import <Debugger/NSArray+DeCategory.h>
 #import <Debugger/NSDictionary+DeCategory.h>
+
+
 

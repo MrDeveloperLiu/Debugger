@@ -54,7 +54,8 @@ void DeHTTPManagerReachableRelease(){
 + (DeHTTPManager *)manager{
     DeHTTPManager *manager = [[self alloc] init];
     manager.responseSerializer = [DeHTTPResponseSerializer serializer];
-    manager.requestSerializer = [DeHTTPRequestSerializer serializer];
+//    manager.requestSerializer = [DeHTTPRequestSerializer serializer];
+    manager.requestSerializer = [DeHTTPJsonRequestSerializer serializer];
     return manager;
 }
 
@@ -69,26 +70,34 @@ void DeHTTPManagerReachableRelease(){
 - (DeHTTPOperation *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(NSDictionary *)paramters successBlock:(DeHTTPDataTaskSuccessBlock)successBlock failedBlock:(DeHTTPDataTaskFailedBlock)failedBlock{
 
     DeReachable *reachable = DeHTTPManagerReachable();
-    if ([reachable notReachable]) {
+    if ([reachable notReachable]) { //无网络错误
         if (failedBlock) {
             failedBlock(nil, nil, [DeHTTPNotReachableError error]);
         }
         return nil;
     }
     
-    __weak __typeof(self) ws = self;    
-    NSMutableURLRequest *request = [_requestSerializer requestWithBaseUrl:url method:method paramters:paramters];
+    __weak __typeof(self) ws = self;
+    NSError *requestSerializerError = nil;
+    NSMutableURLRequest *request = [_requestSerializer requestWithBaseUrl:url method:method paramters:paramters error:&requestSerializerError];
+    if (requestSerializerError) { //请求串行器错误
+        if (failedBlock) {
+            failedBlock(nil, nil, requestSerializerError);
+        }
+        return nil;
+    }
+    
     DeHTTPOperation *operation = [[DeHTTPOperation alloc] initWithRequest:request manager:self successBlock:^(DeHTTPDataTask *task, NSURLResponse *response, id data) {
         
-        NSError *serializerError = nil;
+        NSError *responseSerializerError = nil;
         id serializerData = [ws.responseSerializer responseObjectFromResponse:response
                                                                          data:data
-                                                                        error:&serializerError];
-        if (serializerError) {
-            task.error = serializerError;
+                                                                        error:&responseSerializerError];
+        if (responseSerializerError) { //响应串行器错误
+            task.error = responseSerializerError;
             [ws postNotification:DeHTTPManagerFailedNotification task:task userInfo:task.userInfo];
             if (failedBlock) {
-                failedBlock(task, response, serializerError);
+                failedBlock(task, response, responseSerializerError);
             }
         }else{
             task.serializerData = serializerData;
@@ -100,7 +109,7 @@ void DeHTTPManagerReachableRelease(){
     } failedBlock:^(DeHTTPDataTask *task, NSURLResponse *response, NSError *error) {
         
         [ws postNotification:DeHTTPManagerFailedNotification task:task userInfo:task.userInfo];
-        if (failedBlock) {
+        if (failedBlock) { //其他错误
             failedBlock(task, response, error);
         }
     }];

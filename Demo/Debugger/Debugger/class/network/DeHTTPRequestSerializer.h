@@ -18,14 +18,18 @@
 
 @interface DeHTTPRequestSerializer : NSObject
 
-+ (DeHTTPRequestSerializer *)serializer;
++ (instancetype)serializer;
 
 @property (nonatomic, strong) NSSet *urlEncodingParametersInURI;
 @property (nonatomic, strong) NSMutableDictionary *allHTTPHeaderFields;
 @property (nonatomic, assign) NSTimeInterval timeout;
 
-- (NSMutableURLRequest *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(NSDictionary *)paramters;
+- (NSMutableURLRequest *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(NSDictionary *)paramters error:(NSError **)error;
+@end
+
+@interface DeHTTPRequestSerializer (HTTPField)
 - (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field;
+- (void)HTTPRequestSerializerSetHTTPField:(NSMutableURLRequest *)request;
 @end
 
 @interface DeHTTPRequestParamterPairs : NSObject
@@ -38,3 +42,7 @@ FOUNDATION_EXPORT NSArray * de_paramtersToPairs(NSString *key, id value);
 FOUNDATION_EXPORT NSString * de_urlEncodeStringWithKeyValuePairs(NSArray *pairs);
 FOUNDATION_EXPORT NSString * de_urlEncodeString(NSString *string);
 
+
+@interface DeHTTPJsonRequestSerializer : DeHTTPRequestSerializer
+@property (nonatomic, assign) NSJSONWritingOptions writingOptions;
+@end
