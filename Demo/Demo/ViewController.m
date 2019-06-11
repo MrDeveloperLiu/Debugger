@@ -33,7 +33,7 @@
     self.manager = [DeHTTPManager manager];
     NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
     NSDictionary *paramters = @{@"1" : @"中文"};
-    DeHTTPOperation *ope = [self.manager requestWithBaseUrl:url method:@"POST" paramters:paramters successBlock:^(DeHTTPDataTask *task, NSURLResponse *response, id data) {
+    [self.manager requestWithBaseUrl:url method:@"POST" paramters:paramters successBlock:^(DeHTTPDataTask *task, NSURLResponse *response, id data) {
         NSLog(@"%@", data);
     } failedBlock:^(DeHTTPDataTask *task, NSURLResponse *response, NSError *error) {
         if (task.isCanceled) {
@@ -42,7 +42,6 @@
             NSLog(@"%@", error);
         }
     }];
-    NSLog(@"%@", ope);
 }
 
 - (EDJOrderView *)collectionView{
