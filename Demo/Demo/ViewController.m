@@ -39,7 +39,7 @@
     
     NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
     NSDictionary *paramters = @{@"1" : @"中文", @"2" : @"English"};
-    [self.manager requestWithBaseUrl:url method:kHTTPMethodPOST paramters:paramters successBlock:^(DeHTTPDataTask *task, NSURLResponse *response, id data) {
+    [[self.manager requestWithBaseUrl:url method:kHTTPMethodPOST paramters:paramters successBlock:^(DeHTTPDataTask *task, NSURLResponse *response, id data) {
         NSLog(@"%@", data);
     } failedBlock:^(DeHTTPDataTask *task, NSURLResponse *response, NSError *error) {
         if (task.isCanceled) {
@@ -47,7 +47,7 @@
         }else{
             NSLog(@"%@", [error description]);
         }
-    }];
+    }] cancel] ;
 }
 
 - (EDJOrderView *)collectionView{

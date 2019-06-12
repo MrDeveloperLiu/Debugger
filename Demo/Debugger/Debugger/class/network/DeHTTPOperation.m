@@ -33,7 +33,6 @@
 - (void)cancelNetwork{
     _task.canceled = YES;
     [_task.dataTask cancel];
-    [_manager.network.session finishTasksAndInvalidate];
 }
 
 - (void)start{
