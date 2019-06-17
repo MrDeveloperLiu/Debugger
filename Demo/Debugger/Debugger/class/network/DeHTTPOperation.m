@@ -50,11 +50,11 @@
 }
 
 - (void)cancel{
-    if (self.isFinished) {
+    if (self.isFinished || self.isCancelled) {
         return;
     }
-    [super cancel];    
     [_lock lock];
+    [super cancel];
     self.executing = NO;
     self.finished = YES;
     [self cancelNetwork];
@@ -62,16 +62,14 @@
 }
 
 - (void)setExecuting:(BOOL)executing{
-    NSString *key = NSStringFromSelector(@selector(isExecuting));
-    [self willChangeValueForKey:key];
+    [self willChangeValueForKey:NSStringFromSelector(@selector(isExecuting))];
     _executing = executing;
-    [self didChangeValueForKey:key];
+    [self didChangeValueForKey:NSStringFromSelector(@selector(isExecuting))];
 }
 
 - (void)setFinished:(BOOL)finished{
-    NSString *key = NSStringFromSelector(@selector(isFinished));
-    [self willChangeValueForKey:key];
+    [self willChangeValueForKey:NSStringFromSelector(@selector(isFinished))];
     _finished = finished;
-    [self didChangeValueForKey:key];
+    [self didChangeValueForKey:NSStringFromSelector(@selector(isFinished))];
 }
 @end

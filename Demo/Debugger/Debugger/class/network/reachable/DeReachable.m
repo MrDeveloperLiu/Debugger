@@ -18,10 +18,13 @@ NSString * DeReachableChangedNotification = @"DeReachableChangedNotification";
 NSString * DeReachableChangedUserInfoKey = @"state";
 
 DeReachableState DeReachabilityStatusForFlags(SCNetworkReachabilityFlags flags) {
-    BOOL isReachable = ((flags & kSCNetworkReachabilityFlagsReachable) != 0);
-    BOOL needsConnection = ((flags & kSCNetworkReachabilityFlagsConnectionRequired) != 0);
-    BOOL canConnectionAutomatically = (((flags & kSCNetworkReachabilityFlagsConnectionOnDemand ) != 0) || ((flags & kSCNetworkReachabilityFlagsConnectionOnTraffic) != 0));
-    BOOL canConnectWithoutUserInteraction = (canConnectionAutomatically && (flags & kSCNetworkReachabilityFlagsInterventionRequired) == 0);
+    BOOL isReachable = (flags & kSCNetworkReachabilityFlagsReachable);
+    BOOL needsConnection = (flags & kSCNetworkReachabilityFlagsConnectionRequired);
+    
+    BOOL canConnectionAutomatically = ((flags & kSCNetworkReachabilityFlagsConnectionOnDemand ) ||
+                                       (flags & kSCNetworkReachabilityFlagsConnectionOnTraffic));
+    BOOL canConnectWithoutUserInteraction = (canConnectionAutomatically &&
+                                             !(flags & kSCNetworkReachabilityFlagsInterventionRequired));
     BOOL isNetworkReachable = (isReachable && (!needsConnection || canConnectWithoutUserInteraction));
     
     DeReachableState state = DeReachableStateNotReachable;
