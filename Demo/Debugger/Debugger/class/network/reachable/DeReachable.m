@@ -26,11 +26,12 @@ DeReachableState DeReachabilityStatusForFlags(SCNetworkReachabilityFlags flags) 
     BOOL canConnectWithoutUserInteraction = (canConnectionAutomatically &&
                                              !(flags & kSCNetworkReachabilityFlagsInterventionRequired));
     BOOL isNetworkReachable = (isReachable && (!needsConnection || canConnectWithoutUserInteraction));
-    
+    BOOL isWWAN = (flags & kSCNetworkReachabilityFlagsIsWWAN);
     DeReachableState state = DeReachableStateNotReachable;
-    if (isNetworkReachable == NO) {
+    
+    if (!isNetworkReachable) { 
         state = DeReachableStateNotReachable;
-    }else if ((flags & kSCNetworkReachabilityFlagsIsWWAN) != 0) {
+    }else if (isWWAN) {
         state = DeReachableStateWWAN;
     }else {
         state = DeReachableStateWIFI;

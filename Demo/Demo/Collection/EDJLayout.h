@@ -9,27 +9,31 @@
 
 #import "EDJLayoutItems.h"
 
-typedef NS_ENUM(NSUInteger, EDJLayoutDirection) {
-    EDJLayoutDirectionVertical = 0,
-    EDJLayoutDirectionHorizontal,
-};
 
 @interface EDJLayout : UICollectionViewLayout
+{
+@package
+    NSMutableArray *_attributes;
+    NSMutableArray *_items;
+    CGSize          _viewSize;
+}
 @property (nonatomic, strong, readonly) NSMutableArray *attributes;
 @property (nonatomic, strong, readonly) NSMutableArray *items;
 @property (nonatomic, assign, readonly) CGSize viewSize;
-@property (nonatomic, assign) EDJLayoutDirection direction;
 //itemSize 是根据direction取
 @property (nonatomic, assign) CGSize itemSize;
-@property (nonatomic, assign) CGFloat itemMargin;
+@property (nonatomic, assign) float itemMargin;
+@property (nonatomic, assign) float sectionMargin;
 @end
 
 @interface EDJLayout (SubClass)
 - (void)_layoutBegan;
 - (void)_layoutFinished;
-- (CGFloat)_offsetItem:(NSInteger)item section:(NSInteger)section;
 - (void)_layoutSections;
-- (EDJLayoutItems *)_layoutSection:(NSInteger)section previousItem:(EDJLayoutItems *)previousItem;
-- (EDJLayoutItem *)_attributeWithIndexPath:(NSIndexPath *)indexPath previous:(EDJLayoutItem *)previous;
+
+- (CGFloat)_offsetItemInSection:(NSInteger)section;
+- (void)__layoutSectionItem:(EDJLayoutItems *)item last:(EDJLayoutItems *)last;
 - (void)_calculateSize;
 @end
+
+

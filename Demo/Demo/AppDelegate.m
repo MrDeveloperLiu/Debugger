@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <UIKit/UIKit.h>
+#import "UIApplication+NetComponents.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [application networkInstall];
     return YES;
 }
 

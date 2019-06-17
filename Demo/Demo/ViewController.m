@@ -7,47 +7,37 @@
 //
 
 #import "ViewController.h"
-#import "AnyType.h"
 #import "EDJOrderView.h"
-
-#import <Debugger/Debugger.h>
+#import "UIApplication+NetComponents.h"
 
 @interface ViewController () <UICollectionViewDelegate>
 @property (nonatomic, strong) EDJOrderView *collectionView;
 @property (nonatomic, strong) EDJOrderDatasource *ds;
 
-@property (nonatomic, strong) DeHTTPManager *manager;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     [self.view addSubview:self.collectionView];
     self.collectionView.frame = self.view.bounds;
-    self.ds.datas = @[@[@"1", @"2", @"3"].mutableCopy ].mutableCopy;
-    
-    
-    DeReachable *reachable = [DeReachable reachable];
-    [reachable start];
-    
-    self.manager = [DeHTTPManager manager];
-    [self.manager setReachableBlock:^BOOL{
-        return ![reachable notReachable];
-    }];
-    
+    self.ds.datas = @[@[@"1-1", @"1-2"].mutableCopy, @[@"2-1"].mutableCopy, @[@"3-1", @"3-2", @"3-3"].mutableCopy].mutableCopy;
+        
+
     NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
     NSDictionary *paramters = @{@"1" : @"中文", @"2" : @"English"};
-    [[self.manager requestWithBaseUrl:url method:kHTTPMethodPOST paramters:paramters successBlock:^(DeHTTPDataTask *task, NSURLResponse *response, id data) {
+
+    [NETComp requestWithBaseUrl:url method:kHTTPMethodPOST paramters:paramters successBlock:^(id<NetTask> task, NSURLResponse *response, id data) {
         NSLog(@"%@", data);
-    } failedBlock:^(DeHTTPDataTask *task, NSURLResponse *response, NSError *error) {
+    } failedBlock:^(id<NetTask> task, NSURLResponse *response, NSError *error) {
         if (task.isCanceled) {
             NSLog(@"canceled: %@", error);
         }else{
             NSLog(@"%@", [error description]);
         }
-    }] cancel] ;
+    }];
 }
 
 - (EDJOrderView *)collectionView{

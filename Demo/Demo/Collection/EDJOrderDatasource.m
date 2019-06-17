@@ -38,7 +38,7 @@
     }
 }
 
-- (void)deleteItemAtIndexPath:(NSIndexPath *)indexPath{
+- (void)deleteItemAtIndexPath:(NSIndexPath *)indexPath{    
     NSMutableArray *temp = [_datas objectAtIndex:indexPath.section];
     [temp removeObjectAtIndex:indexPath.item];
     [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];

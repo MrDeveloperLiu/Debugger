@@ -12,6 +12,9 @@
 
 - (instancetype)init{
     self = [super initWithFrame:CGRectZero collectionViewLayout:[EDJLayout new]];
+    if (@available(iOS 10.0, *)) {
+        [self setPrefetchingEnabled:NO];
+    }
     [self registerClass:[EDJOrderViewCell class] forCellWithReuseIdentifier:[EDJOrderViewCell identifier]];
     return self;
 }

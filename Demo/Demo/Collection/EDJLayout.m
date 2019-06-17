@@ -8,12 +8,19 @@
 
 #import "EDJLayout.h"
 
+@interface EDJLayout ()
+@property (nonatomic, strong) NSMutableArray *attributes;
+@property (nonatomic, strong) NSMutableArray *items;
+@property (nonatomic, assign) CGSize viewSize;
+@end
+
 @implementation EDJLayout
 
 - (instancetype)init{
     self = [super init];
     _itemSize = (CGSize){44, 44};
     _itemMargin = 0.5;
+    _sectionMargin = 0.5;
     return self;
 }
 
@@ -55,74 +62,73 @@
 
 }
 
-- (CGFloat)_offsetItem:(NSInteger)item section:(NSInteger)section{
-    if (item <= 0 && section <= 0) {
+- (CGFloat)_offsetItemInSection:(NSInteger)section{
+    if (0 == section) {
         return 0;
     }
-    return _itemMargin;
+    return _sectionMargin;
 }
 
 - (void)_calculateSize{
     EDJLayoutItem *last = _attributes.lastObject;
-    if (_direction == EDJLayoutDirectionVertical) {
-        _viewSize = CGSizeMake(CGRectGetWidth(self.collectionView.frame),
-                               CGRectGetMaxY(last.frame));
-    }else{
-        _viewSize = CGSizeMake(CGRectGetMaxX(last.frame),
-                               CGRectGetHeight(self.collectionView.frame));
-    }
+    _viewSize = CGSizeMake(CGRectGetWidth(self.collectionView.frame),
+                           CGRectGetMaxY(last.frame));
 }
 
 - (void)_layoutSections{
     NSInteger sections = [self.collectionView numberOfSections];
     EDJLayoutItems *previous = nil;
     for (int i = 0; i < sections; i++) {
-        //items
-        EDJLayoutItems *items = [self _layoutSection:i previousItem:previous];
-        [_items addObject:items];
-        //insert attribute
-        [_attributes addObjectsFromArray:items.attributes];
+        NSInteger counts = [self.collectionView numberOfItemsInSection:i];
+        if (counts <= 0) {
+            continue;
+        }
+        EDJLayoutItems *items = [EDJLayoutItems new];
+        items.section = i;
+        items.itemCount = counts;
+        [self __layoutSectionItem:items last:previous];
         previous = items;
     }
 }
 
-- (EDJLayoutItems *)_layoutSection:(NSInteger)section previousItem:(EDJLayoutItems *)previousItem{
-    NSInteger number = [self.collectionView numberOfItemsInSection:section];
-    EDJLayoutItems *items = [EDJLayoutItems new];
-    items.section = section;
+- (void)__layoutSectionItem:(EDJLayoutItems *)item last:(EDJLayoutItems *)last{
+    EDJLayoutItem *previousItem = last.attributes.lastObject;
+    CGFloat margin = (item.itemCount - 1) * _itemMargin;
+    CGFloat width = (CGRectGetWidth(self.collectionView.frame) - margin) / item.itemCount;
     
-    EDJLayoutItem *previous = previousItem.attributes.lastObject;
-    CGRect rect;
-    for (int i = 0; i < number; i++) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:section];
-        EDJLayoutItem *attribute = [self _attributeWithIndexPath:indexPath previous:previous];
-        if (i == 0) {
-            rect.origin = attribute.frame.origin;
-        }
-        [items.attributes addObject:attribute];
-        previous = attribute;
-    }
-    rect.size = CGSizeMake(CGRectGetMaxX(previous.frame) - rect.origin.x,
-                           CGRectGetMaxY(previous.frame) - rect.origin.y);
-    items.rect = rect;
-    return items;
-}
+    EDJLayoutItem *firstItem = nil;
+    
+    for (int i = 0; i < item.itemCount; i++) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:item.section];
+        CGFloat itemOffset = [self _offsetItemInSection:indexPath.section];
 
-- (EDJLayoutItem *)_attributeWithIndexPath:(NSIndexPath *)indexPath previous:(EDJLayoutItem *)previous{
-    CGFloat itemOffset = [self _offsetItem:indexPath.item section:indexPath.section];;;
-    CGFloat x = 0, y = 0, w = 0, h = 0;
-    if (_direction == EDJLayoutDirectionVertical) {
-        y = CGRectGetMaxY(previous.frame) + itemOffset;
-        w = CGRectGetWidth(self.collectionView.frame);
+        CGFloat x = 0, y = 0,
+        w = width,
         h = _itemSize.height;
-    }else{
-        x = CGRectGetMaxX(previous.frame) + itemOffset;
-        w = _itemSize.width;
-        h = CGRectGetHeight(self.collectionView.frame);
+        
+        if (0 == indexPath.item) {  //第一个
+            y = CGRectGetMaxY(previousItem.frame) + itemOffset;
+        }else{                      //非第一个, 同组
+            x = CGRectGetMaxX(previousItem.frame) + itemOffset;
+            y = CGRectGetMinY(previousItem.frame);
+        }
+        
+        EDJLayoutItem *attribute = [EDJLayoutItem itemWithIndexPath:indexPath frame:CGRectMake(x, y, w, h)];
+        [item.attributes addObject:attribute];
+        
+        if (0 == i) {
+            firstItem = attribute;
+        }
+        previousItem = attribute;
     }
-    CGRect frame = CGRectMake(x, y, w, h);
-    EDJLayoutItem *attribute = [EDJLayoutItem itemWithIndexPath:indexPath frame:frame];
-    return attribute;
+    //计算
+    CGRect rect;
+    rect.origin = firstItem.frame.origin;
+    rect.size = CGSizeMake(CGRectGetMaxX(previousItem.frame) - rect.origin.x,
+                           CGRectGetMaxY(previousItem.frame) - rect.origin.y);
+    item.rect = rect;
+    //添加
+    [_attributes addObjectsFromArray:item.attributes];
+    [_items addObject:item];
 }
-
 @end

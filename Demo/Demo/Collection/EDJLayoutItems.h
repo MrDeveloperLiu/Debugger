@@ -12,6 +12,7 @@
 
 @interface EDJLayoutItems : NSObject
 @property (nonatomic, assign) NSInteger section;
+@property (nonatomic, assign) NSInteger itemCount;
 @property (nonatomic, assign) CGRect rect;
 @property (nonatomic, strong) NSMutableArray <EDJLayoutItem *> *attributes;
 @end

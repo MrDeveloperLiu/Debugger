@@ -22,12 +22,12 @@ FOUNDATION_EXPORT NSString *const DeHTTPManagerUserinfoErrorKey;
 FOUNDATION_EXPORT NSString *const DeHTTPManagerUserinfoResponseKey;
 FOUNDATION_EXPORT NSString *const DeHTTPManagerUserinfoTaskKey;
 
-typedef BOOL(^DeHTTPManagerReachableBlock)(void);
 
 @interface DeHTTPManager : NSObject
 
-@property (nonatomic, copy) DeHTTPManagerReachableBlock reachableBlock;
 @property (nonatomic, strong, readonly) DeHTTPNetwork *network;
+@property (nonatomic, strong, readonly) DeReachable *reachablity;
+
 @property (nonatomic, strong, readonly) NSOperationQueue *queue;
 @property (nonatomic, strong) dispatch_queue_t processQueue;
 

@@ -32,7 +32,7 @@ dispatch_queue_t DeHTTPManagerProcessingQueue(){
 @implementation DeHTTPManager
 
 - (void)dealloc{
-    _reachableBlock = nil;
+    [_reachablity stop];
     [_queue cancelAllOperations];
 }
 
@@ -48,12 +48,14 @@ dispatch_queue_t DeHTTPManagerProcessingQueue(){
     _network = [[DeHTTPNetwork alloc] init];
     _queue = [[NSOperationQueue alloc] init];
     _queue.maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
+    _reachablity = [DeReachable reachable];
+    [_reachablity start];
     return self;
 }
 
 - (DeHTTPOperation *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(id)paramters successBlock:(DeHTTPDataTaskSuccessBlock)successBlock failedBlock:(DeHTTPDataTaskFailedBlock)failedBlock{
 
-    if (self.reachableBlock && !self.reachableBlock()) { //无网络错误
+    if ([self.reachablity notReachable]) { //无网络错误
         if (failedBlock) {
             failedBlock(nil, nil, [DeHTTPNotReachableError error]);
         }

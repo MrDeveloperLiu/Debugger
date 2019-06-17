@@ -15,7 +15,6 @@
 		CD96099722153E1B00FED70A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD96099622153E1B00FED70A /* CoreGraphics.framework */; };
 		CD96099922153E4000FED70A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD96099822153E4000FED70A /* Foundation.framework */; };
 		CD96099B22153E4500FED70A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD96099A22153E4500FED70A /* UIKit.framework */; };
-		CD9B14D22266DEB700D18FCC /* AnyType.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B14D12266DEB700D18FCC /* AnyType.m */; };
 		CDD45BC8221FC3A2001B5ECB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD45BC7221FC3A2001B5ECB /* WebKit.framework */; };
 		CDD5FCAA21E0644700D72368 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD5FCA921E0644700D72368 /* AppDelegate.m */; };
 		CDD5FCAD21E0644700D72368 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD5FCAC21E0644700D72368 /* ViewController.m */; };
@@ -25,6 +24,7 @@
 		CDD5FCB821E0644900D72368 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD5FCB721E0644900D72368 /* main.m */; };
 		CDD5FCC221E0644A00D72368 /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD5FCC121E0644A00D72368 /* DemoTests.m */; };
 		CDD5FCCD21E0644A00D72368 /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD5FCCC21E0644A00D72368 /* DemoUITests.m */; };
+		CDE88FB622B76089002BC71E /* UIApplication+NetComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE88FB522B76089002BC71E /* UIApplication+NetComponents.m */; };
 		CDF5C254228D099900FF64AC /* EDJLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF5C253228D099900FF64AC /* EDJLayoutItem.m */; };
 		CDF5C257228D0C5600FF64AC /* EDJOrderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF5C256228D0C5600FF64AC /* EDJOrderViewCell.m */; };
 		CDF5C25A228D0DB000FF64AC /* EDJOrderDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF5C259228D0DB000FF64AC /* EDJOrderDatasource.m */; };
@@ -62,19 +62,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CD16A11F228BDB37009C5FA6 /* EDJLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJLayout.h; sourceTree = "<group>"; };
-		CD16A120228BDB37009C5FA6 /* EDJLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJLayout.m; sourceTree = "<group>"; };
+		CD16A11F228BDB37009C5FA6 /* EDJLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EDJLayout.h; path = ../EDJLayout.h; sourceTree = "<group>"; };
+		CD16A120228BDB37009C5FA6 /* EDJLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EDJLayout.m; path = ../EDJLayout.m; sourceTree = "<group>"; };
 		CD16A122228BDB71009C5FA6 /* EDJOrderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJOrderView.h; sourceTree = "<group>"; };
 		CD16A123228BDB71009C5FA6 /* EDJOrderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJOrderView.m; sourceTree = "<group>"; };
-		CD16A125228BE139009C5FA6 /* EDJLayoutItems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJLayoutItems.h; sourceTree = "<group>"; };
-		CD16A126228BE139009C5FA6 /* EDJLayoutItems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJLayoutItems.m; sourceTree = "<group>"; };
+		CD16A125228BE139009C5FA6 /* EDJLayoutItems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EDJLayoutItems.h; path = ../EDJLayoutItems.h; sourceTree = "<group>"; };
+		CD16A126228BE139009C5FA6 /* EDJLayoutItems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EDJLayoutItems.m; path = ../EDJLayoutItems.m; sourceTree = "<group>"; };
 		CD4EA9AF22A7612B0052FD9A /* Debugger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Debugger.xcodeproj; path = Debugger/Debugger.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CD7E46362283FDFD00AC2784 /* test.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = test.xml; sourceTree = "<group>"; };
 		CD96099622153E1B00FED70A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CD96099822153E4000FED70A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CD96099A22153E4500FED70A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		CD9B14D02266DEB700D18FCC /* AnyType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyType.h; sourceTree = "<group>"; };
-		CD9B14D12266DEB700D18FCC /* AnyType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnyType.m; sourceTree = "<group>"; };
 		CDD45BC7221FC3A2001B5ECB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CDD5FCA521E0644700D72368 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD5FCA821E0644700D72368 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,12 +90,15 @@
 		CDD5FCC821E0644A00D72368 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD5FCCC21E0644A00D72368 /* DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUITests.m; sourceTree = "<group>"; };
 		CDD5FCCE21E0644A00D72368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDF5C252228D099900FF64AC /* EDJLayoutItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJLayoutItem.h; sourceTree = "<group>"; };
-		CDF5C253228D099900FF64AC /* EDJLayoutItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJLayoutItem.m; sourceTree = "<group>"; };
-		CDF5C255228D0C5600FF64AC /* EDJOrderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJOrderViewCell.h; sourceTree = "<group>"; };
-		CDF5C256228D0C5600FF64AC /* EDJOrderViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJOrderViewCell.m; sourceTree = "<group>"; };
-		CDF5C258228D0DB000FF64AC /* EDJOrderDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJOrderDatasource.h; sourceTree = "<group>"; };
-		CDF5C259228D0DB000FF64AC /* EDJOrderDatasource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJOrderDatasource.m; sourceTree = "<group>"; };
+		CDE88FB422B76089002BC71E /* UIApplication+NetComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIApplication+NetComponents.h"; path = "../UIApplication+NetComponents.h"; sourceTree = "<group>"; };
+		CDE88FB522B76089002BC71E /* UIApplication+NetComponents.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+NetComponents.m"; path = "../UIApplication+NetComponents.m"; sourceTree = "<group>"; };
+		CDE88FB722B762C2002BC71E /* NetComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NetComponents.h; path = ../NetComponents.h; sourceTree = "<group>"; };
+		CDF5C252228D099900FF64AC /* EDJLayoutItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EDJLayoutItem.h; path = ../EDJLayoutItem.h; sourceTree = "<group>"; };
+		CDF5C253228D099900FF64AC /* EDJLayoutItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EDJLayoutItem.m; path = ../EDJLayoutItem.m; sourceTree = "<group>"; };
+		CDF5C255228D0C5600FF64AC /* EDJOrderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EDJOrderViewCell.h; path = ../EDJOrderViewCell.h; sourceTree = "<group>"; };
+		CDF5C256228D0C5600FF64AC /* EDJOrderViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EDJOrderViewCell.m; path = ../EDJOrderViewCell.m; sourceTree = "<group>"; };
+		CDF5C258228D0DB000FF64AC /* EDJOrderDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EDJOrderDatasource.h; path = ../EDJOrderDatasource.h; sourceTree = "<group>"; };
+		CDF5C259228D0DB000FF64AC /* EDJOrderDatasource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EDJOrderDatasource.m; path = ../EDJOrderDatasource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,18 +134,11 @@
 		CD16A11E228BDADD009C5FA6 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				CDF5C252228D099900FF64AC /* EDJLayoutItem.h */,
-				CDF5C253228D099900FF64AC /* EDJLayoutItem.m */,
-				CD16A125228BE139009C5FA6 /* EDJLayoutItems.h */,
-				CD16A126228BE139009C5FA6 /* EDJLayoutItems.m */,
-				CD16A11F228BDB37009C5FA6 /* EDJLayout.h */,
-				CD16A120228BDB37009C5FA6 /* EDJLayout.m */,
+				CDE88FBE22B76D35002BC71E /* cell */,
+				CDE88FBD22B76D29002BC71E /* ds */,
+				CDE88FBC22B76D1D002BC71E /* layout */,
 				CD16A122228BDB71009C5FA6 /* EDJOrderView.h */,
 				CD16A123228BDB71009C5FA6 /* EDJOrderView.m */,
-				CDF5C255228D0C5600FF64AC /* EDJOrderViewCell.h */,
-				CDF5C256228D0C5600FF64AC /* EDJOrderViewCell.m */,
-				CDF5C258228D0DB000FF64AC /* EDJOrderDatasource.h */,
-				CDF5C259228D0DB000FF64AC /* EDJOrderDatasource.m */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -194,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				CD4EA9AF22A7612B0052FD9A /* Debugger.xcodeproj */,
+				CDE88FB122B76068002BC71E /* components */,
 				CD16A11E228BDADD009C5FA6 /* Collection */,
 				CDD5FCA821E0644700D72368 /* AppDelegate.h */,
 				CDD5FCA921E0644700D72368 /* AppDelegate.m */,
@@ -204,8 +199,6 @@
 				CDD5FCB321E0644900D72368 /* LaunchScreen.storyboard */,
 				CDD5FCB621E0644900D72368 /* Info.plist */,
 				CDD5FCB721E0644900D72368 /* main.m */,
-				CD9B14D02266DEB700D18FCC /* AnyType.h */,
-				CD9B14D12266DEB700D18FCC /* AnyType.m */,
 				CD7E46362283FDFD00AC2784 /* test.xml */,
 			);
 			path = Demo;
@@ -227,6 +220,55 @@
 				CDD5FCCE21E0644A00D72368 /* Info.plist */,
 			);
 			path = DemoUITests;
+			sourceTree = "<group>";
+		};
+		CDE88FB122B76068002BC71E /* components */ = {
+			isa = PBXGroup;
+			children = (
+				CDE88FB822B765E9002BC71E /* net */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		CDE88FB822B765E9002BC71E /* net */ = {
+			isa = PBXGroup;
+			children = (
+				CDE88FB722B762C2002BC71E /* NetComponents.h */,
+				CDE88FB422B76089002BC71E /* UIApplication+NetComponents.h */,
+				CDE88FB522B76089002BC71E /* UIApplication+NetComponents.m */,
+			);
+			path = net;
+			sourceTree = "<group>";
+		};
+		CDE88FBC22B76D1D002BC71E /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				CDF5C252228D099900FF64AC /* EDJLayoutItem.h */,
+				CDF5C253228D099900FF64AC /* EDJLayoutItem.m */,
+				CD16A125228BE139009C5FA6 /* EDJLayoutItems.h */,
+				CD16A126228BE139009C5FA6 /* EDJLayoutItems.m */,
+				CD16A11F228BDB37009C5FA6 /* EDJLayout.h */,
+				CD16A120228BDB37009C5FA6 /* EDJLayout.m */,
+			);
+			path = layout;
+			sourceTree = "<group>";
+		};
+		CDE88FBD22B76D29002BC71E /* ds */ = {
+			isa = PBXGroup;
+			children = (
+				CDF5C258228D0DB000FF64AC /* EDJOrderDatasource.h */,
+				CDF5C259228D0DB000FF64AC /* EDJOrderDatasource.m */,
+			);
+			path = ds;
+			sourceTree = "<group>";
+		};
+		CDE88FBE22B76D35002BC71E /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CDF5C255228D0C5600FF64AC /* EDJOrderViewCell.h */,
+				CDF5C256228D0C5600FF64AC /* EDJOrderViewCell.m */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,9 +431,9 @@
 				CD16A127228BE139009C5FA6 /* EDJLayoutItems.m in Sources */,
 				CD16A121228BDB38009C5FA6 /* EDJLayout.m in Sources */,
 				CDF5C254228D099900FF64AC /* EDJLayoutItem.m in Sources */,
-				CD9B14D22266DEB700D18FCC /* AnyType.m in Sources */,
 				CD16A124228BDB71009C5FA6 /* EDJOrderView.m in Sources */,
 				CDD5FCAA21E0644700D72368 /* AppDelegate.m in Sources */,
+				CDE88FB622B76089002BC71E /* UIApplication+NetComponents.m in Sources */,
 				CDF5C25A228D0DB000FF64AC /* EDJOrderDatasource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
