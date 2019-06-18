@@ -13,7 +13,6 @@
 @interface ViewController () <UICollectionViewDelegate>
 @property (nonatomic, strong) EDJOrderView *collectionView;
 @property (nonatomic, strong) EDJOrderDatasource *ds;
-
 @end
 
 @implementation ViewController
@@ -23,9 +22,8 @@
     
     [self.view addSubview:self.collectionView];
     self.collectionView.frame = self.view.bounds;
-    self.ds.datas = @[@[@"1-1", @"1-2"].mutableCopy, @[@"2-1"].mutableCopy, @[@"3-1", @"3-2", @"3-3"].mutableCopy].mutableCopy;
-        
-
+    
+    /*
     NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
     NSDictionary *paramters = @{@"1" : @"中文", @"2" : @"English"};
 
@@ -37,6 +35,25 @@
         }else{
             NSLog(@"%@", [error description]);
         }
+    }];
+    */
+    
+    [[DeSignal createSignal:^DeDispose *(id<DeSubscribler> subscribler) {
+        return [[DeScheduler mainthreadScheduler] scheduleAfter:2.0 block:^{
+            NSMutableArray *datas = @[@[@"1-1", @"1-2"].mutableCopy,
+                                      @[@"2-1"].mutableCopy,
+                                      @[@"3-1", @"3-2", @"3-3"].mutableCopy
+                                      ].mutableCopy;
+            [subscribler sendNext:datas];
+            
+            [subscribler sendCompleted];
+        }];
+    }] subscribeNext:^(id x) {
+        NSLog(@"next:%@", x);
+        self.ds.datas = x;
+    } completed:^{
+        NSLog(@"completed");
+        [self.collectionView reloadData];
     }];
 }
 

@@ -36,5 +36,5 @@ FOUNDATION_EXPORT const unsigned char DebuggerVersionString[];
 #import <Debugger/NSArray+DeCategory.h>
 #import <Debugger/NSDictionary+DeCategory.h>
 
-
+#import <Debugger/DeReact.h>
 

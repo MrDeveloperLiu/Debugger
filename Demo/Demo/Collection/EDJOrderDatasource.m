@@ -29,6 +29,9 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     EDJOrderViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[EDJOrderViewCell identifier]
                                                                        forIndexPath:indexPath];
+    NSMutableArray *datas = [_datas objectAtIndex:indexPath.section];
+    id model = [datas objectAtIndex:indexPath.item];
+    cell.model = model;
     return cell;
 }
 
@@ -41,6 +44,10 @@
 - (void)deleteItemAtIndexPath:(NSIndexPath *)indexPath{    
     NSMutableArray *temp = [_datas objectAtIndex:indexPath.section];
     [temp removeObjectAtIndex:indexPath.item];
+//    if (temp.count <= 0) {
+//        [_datas removeObjectAtIndex:indexPath.section];
+//        [self.collectionView reloadData];
+//    }
     [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
 }
 @end

@@ -100,16 +100,16 @@
     
     for (int i = 0; i < item.itemCount; i++) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:item.section];
-        CGFloat itemOffset = [self _offsetItemInSection:indexPath.section];
 
         CGFloat x = 0, y = 0,
         w = width,
         h = _itemSize.height;
         
         if (0 == indexPath.item) {  //第一个
+            CGFloat itemOffset = [self _offsetItemInSection:indexPath.section];
             y = CGRectGetMaxY(previousItem.frame) + itemOffset;
         }else{                      //非第一个, 同组
-            x = CGRectGetMaxX(previousItem.frame) + itemOffset;
+            x = CGRectGetMaxX(previousItem.frame) + _itemMargin;
             y = CGRectGetMinY(previousItem.frame);
         }
         

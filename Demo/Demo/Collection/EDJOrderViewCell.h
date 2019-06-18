@@ -10,6 +10,7 @@
 
 @interface EDJOrderViewCell : UICollectionViewCell
 + (NSString *)identifier;
+@property (nonatomic, strong) id model;
 @end
 
 
