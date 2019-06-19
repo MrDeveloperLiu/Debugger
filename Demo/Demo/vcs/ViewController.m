@@ -16,8 +16,14 @@
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"检测内存：%@", [DeDebugRefCount ref]);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"屏幕 %@", NSStringFromCGRect([UIScreen mainScreen].bounds));
     
     self.title = @"Main";
     
@@ -34,7 +40,7 @@
                               @[@"2-1"].mutableCopy,
                               @[@"3-1", @"3-2", @"3-3"].mutableCopy
                               ].mutableCopy;
-    self.ds.datas = datas;
+    self.ds.datas = datas;    
 }
 
 - (EDJOrderView *)collectionView{

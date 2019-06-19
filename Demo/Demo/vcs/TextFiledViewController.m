@@ -18,7 +18,7 @@
 @implementation TextFiledViewController
 
 - (void)dealloc{
-    NSLog(@"检测内存：%@", [DeDebugRefCount ref]);
+    
 }
 
 - (void)viewDidLoad {
@@ -28,11 +28,7 @@
     
     UIView *v = [UIView new]; v.backgroundColor = [UIColor redColor];
     [self.view addSubview:v];
-    //链式
-    v.de_width(self.view.width)
-    .de_height(60)
-    .de_centerX(self.view.centerX)
-    .de_bottom(self.view.bottom - 10);
+    v.de_width(self.view.width).de_height(60).de_centerX(self.view.centerX).de_bottom(self.view.bottom - 10);
 
     //fuck !  it's very comfortable
     __weak __typeof(self) ws = self;

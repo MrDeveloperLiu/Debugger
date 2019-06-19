@@ -8,11 +8,12 @@
 
 #import "UIView+DeFrame.h"
 
+
 @implementation UIView (DeFrame)
 - (void)setLeading:(CGFloat)leading{
     CGRect frame = self.frame;
     frame.origin.x = leading;
-    self.frame = frame;
+    self.frame = frame;    
 }
 - (CGFloat)leading{
     return CGRectGetMinX(self.frame);
@@ -29,7 +30,7 @@
 
 - (void)setTop:(CGFloat)top{
     CGRect frame = self.frame;
-    frame.origin.y = top;
+    frame.origin.y = top + kIphoneXSafeTop;
     self.frame = frame;
 }
 - (CGFloat)top{
@@ -38,7 +39,7 @@
 
 - (void)setBottom:(CGFloat)bottom{
     CGRect frame = self.frame;
-    frame.origin.y = bottom - frame.size.height;
+    frame.origin.y = bottom - frame.size.height - kIphoneXSafeBottom;
     self.frame = frame;
 }
 - (CGFloat)bottom{
