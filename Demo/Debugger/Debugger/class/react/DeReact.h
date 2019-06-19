@@ -14,5 +14,8 @@
 #import "DeSubscribler.h"
 #import "DeDispose.h"
 #import "DeScheduler.h"
+#import "DeSubject.h"
+
+#import "NSObject+DeDealloc.h"
 
 #endif /* DeReact_h */

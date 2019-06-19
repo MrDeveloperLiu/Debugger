@@ -48,6 +48,10 @@
 		CD4D1A0022B8C5CF003A89CA /* DeStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D19FE22B8C5CF003A89CA /* DeStream.m */; };
 		CD4D1A0822B8CC3C003A89CA /* DeScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4D1A0622B8CC3C003A89CA /* DeScheduler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD4D1A0922B8CC3C003A89CA /* DeScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D1A0722B8CC3C003A89CA /* DeScheduler.m */; };
+		CD4D1A0C22B9D13C003A89CA /* NSObject+DeDealloc.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4D1A0A22B9D13C003A89CA /* NSObject+DeDealloc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4D1A0D22B9D13C003A89CA /* NSObject+DeDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D1A0B22B9D13C003A89CA /* NSObject+DeDealloc.m */; };
+		CD4D1A1022B9F6A0003A89CA /* DeSubject.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4D1A0E22B9F6A0003A89CA /* DeSubject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4D1A1122B9F6A0003A89CA /* DeSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D1A0F22B9F6A0003A89CA /* DeSubject.m */; };
 		CD4EA99F22A7610A0052FD9A /* Debugger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4EA99522A7610A0052FD9A /* Debugger.framework */; };
 		CD4EA9A422A7610A0052FD9A /* DebuggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4EA9A322A7610A0052FD9A /* DebuggerTests.m */; };
 		CD4EA9A622A7610A0052FD9A /* Debugger.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4EA99822A7610A0052FD9A /* Debugger.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -111,6 +115,10 @@
 		CD4D19FE22B8C5CF003A89CA /* DeStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeStream.m; sourceTree = "<group>"; };
 		CD4D1A0622B8CC3C003A89CA /* DeScheduler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeScheduler.h; sourceTree = "<group>"; };
 		CD4D1A0722B8CC3C003A89CA /* DeScheduler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeScheduler.m; sourceTree = "<group>"; };
+		CD4D1A0A22B9D13C003A89CA /* NSObject+DeDealloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DeDealloc.h"; sourceTree = "<group>"; };
+		CD4D1A0B22B9D13C003A89CA /* NSObject+DeDealloc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DeDealloc.m"; sourceTree = "<group>"; };
+		CD4D1A0E22B9F6A0003A89CA /* DeSubject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeSubject.h; sourceTree = "<group>"; };
+		CD4D1A0F22B9F6A0003A89CA /* DeSubject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeSubject.m; sourceTree = "<group>"; };
 		CD4EA99522A7610A0052FD9A /* Debugger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Debugger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4EA99822A7610A0052FD9A /* Debugger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Debugger.h; sourceTree = "<group>"; };
 		CD4EA99922A7610A0052FD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -213,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				CD4D19FB22B8C36E003A89CA /* DeReact.h */,
+				CD4D1A0E22B9F6A0003A89CA /* DeSubject.h */,
+				CD4D1A0F22B9F6A0003A89CA /* DeSubject.m */,
 				CD4D19FD22B8C5CF003A89CA /* DeStream.h */,
 				CD4D19FE22B8C5CF003A89CA /* DeStream.m */,
 				CD4D19E922B88C96003A89CA /* DeSignal.h */,
@@ -223,6 +233,8 @@
 				CD4D19F722B8B4A5003A89CA /* DeDispose.m */,
 				CD4D1A0622B8CC3C003A89CA /* DeScheduler.h */,
 				CD4D1A0722B8CC3C003A89CA /* DeScheduler.m */,
+				CD4D1A0A22B9D13C003A89CA /* NSObject+DeDealloc.h */,
+				CD4D1A0B22B9D13C003A89CA /* NSObject+DeDealloc.m */,
 			);
 			path = react;
 			sourceTree = "<group>";
@@ -324,11 +336,13 @@
 				CD011B2A22AF8BF800E823E0 /* NSError+DeErrorMsg.h in Headers */,
 				CD4D19EA22B88C96003A89CA /* DeSignal.h in Headers */,
 				CD011B2222AF81AB00E823E0 /* DeHTTPInvalidResponseError.h in Headers */,
+				CD4D1A0C22B9D13C003A89CA /* NSObject+DeDealloc.h in Headers */,
 				CD4D19F822B8B4A5003A89CA /* DeDispose.h in Headers */,
 				CD4D19FC22B8C36E003A89CA /* DeReact.h in Headers */,
 				CD4D19FF22B8C5CF003A89CA /* DeStream.h in Headers */,
 				CD4D19EF22B8B2F3003A89CA /* DeSubscribler.h in Headers */,
 				CD4EA9C322A7679C0052FD9A /* DeFileLogger.h in Headers */,
+				CD4D1A1022B9F6A0003A89CA /* DeSubject.h in Headers */,
 				CD4D1A0822B8CC3C003A89CA /* DeScheduler.h in Headers */,
 				CD4EA9A622A7610A0052FD9A /* Debugger.h in Headers */,
 			);
@@ -437,9 +451,11 @@
 				CD011B2F22AF8E2A00E823E0 /* DeHTTPJsonInvalidParamterError.m in Sources */,
 				CD011B1F22AF80DA00E823E0 /* DeHTTPNotReachableError.m in Sources */,
 				CD011B0E22AF5E0600E823E0 /* NSArray+DeCategory.m in Sources */,
+				CD4D1A0D22B9D13C003A89CA /* NSObject+DeDealloc.m in Sources */,
 				CD4EA9C722A767D20052FD9A /* DeFileDirectory.m in Sources */,
 				CD4D19F022B8B2F3003A89CA /* DeSubscribler.m in Sources */,
 				CD283FC222A8E07C00D46EEF /* DeSimpleXMLNode.m in Sources */,
+				CD4D1A1122B9F6A0003A89CA /* DeSubject.m in Sources */,
 				CD283FC122A8E07C00D46EEF /* DeSimpleXMLParaser.m in Sources */,
 				CD011B1222AF5E1B00E823E0 /* NSDictionary+DeCategory.m in Sources */,
 				CD283FC922A8E13A00D46EEF /* DeHTTPNetwork.m in Sources */,

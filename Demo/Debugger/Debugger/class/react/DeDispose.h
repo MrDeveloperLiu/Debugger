@@ -10,7 +10,7 @@
 
 
 @interface DeDispose : NSObject
-@property (nonatomic, assign, readonly, getter=isDisposed) BOOL disposed;
+@property (nonatomic, assign, getter=isDisposed) BOOL disposed;
 - (instancetype)initWithBlock:(dispatch_block_t)block;
 + (instancetype)disposeWithBlock:(dispatch_block_t)block;
 - (void)dispose;
@@ -25,3 +25,4 @@
 - (void)addDispose:(DeDispose *)dispose;
 - (void)removeDispose:(DeDispose *)dispose;
 @end
+

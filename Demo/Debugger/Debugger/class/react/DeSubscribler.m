@@ -21,7 +21,6 @@
     _next = nil;
     _error = nil;
     _completed = nil;
-    NSLog(@"%s", __func__);
 }
 
 - (instancetype)initWithNext:(DeSubscriblerNextBlock)next error:(DeSubscriblerErrorBlock)error completed:(DeSubscriblerCompletedBlock)completed{

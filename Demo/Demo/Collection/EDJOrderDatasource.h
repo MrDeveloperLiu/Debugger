@@ -15,5 +15,6 @@
 @property (nonatomic, strong) NSMutableArray *datas;
 - (instancetype)initWithOrderView:(EDJOrderView *)orderView delegate:(id)delegate;
 - (void)deleteItemAtIndexPath:(NSIndexPath *)indexPath;
+- (id)itemAtIndexPath:(NSIndexPath *)indexPath;
 @end
 

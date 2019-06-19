@@ -14,9 +14,8 @@
 @end
 
 @implementation DeSignal
-
 - (void)dealloc{
-    NSLog(@"%s", __func__);
+    
 }
 
 + (DeSignal *)createSignal:(DeSignalBlock)signal{

@@ -16,9 +16,8 @@
 @end
 
 @implementation DeDispose
-
 - (void)dealloc{
-    NSLog(@"%s", __func__);
+    
 }
 
 - (instancetype)initWithBlock:(dispatch_block_t)block{
@@ -114,5 +113,8 @@
         [obj dispose];
     }];
     _disponses = nil;
+    [super dispose];
 }
 @end
+
+

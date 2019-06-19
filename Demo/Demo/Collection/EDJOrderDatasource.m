@@ -44,10 +44,11 @@
 - (void)deleteItemAtIndexPath:(NSIndexPath *)indexPath{    
     NSMutableArray *temp = [_datas objectAtIndex:indexPath.section];
     [temp removeObjectAtIndex:indexPath.item];
-//    if (temp.count <= 0) {
-//        [_datas removeObjectAtIndex:indexPath.section];
-//        [self.collectionView reloadData];
-//    }
     [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+}
+
+- (id)itemAtIndexPath:(NSIndexPath *)indexPath{
+    NSMutableArray *temp = [_datas objectAtIndex:indexPath.section];
+    return [temp objectAtIndex:indexPath.item];
 }
 @end
