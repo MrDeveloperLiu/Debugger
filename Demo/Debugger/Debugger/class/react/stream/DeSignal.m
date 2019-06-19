@@ -78,4 +78,29 @@
         return dispose;
     }];
 }
+
+- (instancetype)filter:(BOOL (^)(id))transform{
+    NSParameterAssert(transform);
+    
+    return [DeSignal createSignal:^DeDispose *(id<DeSubscribler> subscribler) {
+        
+        DeComboneDispose *dispose = [DeComboneDispose comboneDispose];
+        
+        DeDispose *mapDispose = [self subscribeNext:^(id x) {
+            if (!transform(x)) {
+                [subscribler sendNext:x];
+            }
+        } error:^(NSError *error) {
+            [dispose dispose];
+            [subscribler sendError:error];
+        } completed:^{
+            [dispose dispose];
+            [subscribler sendCompleted];
+        }];
+        
+        [dispose addDispose:mapDispose];
+        
+        return dispose;
+    }];
+}
 @end

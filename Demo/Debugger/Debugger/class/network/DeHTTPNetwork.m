@@ -18,6 +18,7 @@
 
 - (void)dealloc{
     [_session finishTasksAndInvalidate];
+    [_session invalidateAndCancel];
     _session = nil;
     _delegateQueue = nil;
     _lock = nil;

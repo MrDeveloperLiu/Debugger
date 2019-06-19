@@ -7,9 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "EDJOrderView.h"
-#import "UIApplication+NetComponents.h"
-
 #import "TextFiledViewController.h"
 
 @interface ViewController () <UICollectionViewDelegate>

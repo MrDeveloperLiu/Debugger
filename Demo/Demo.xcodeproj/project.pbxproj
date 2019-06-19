@@ -17,6 +17,7 @@
 		CD96099722153E1B00FED70A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD96099622153E1B00FED70A /* CoreGraphics.framework */; };
 		CD96099922153E4000FED70A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD96099822153E4000FED70A /* Foundation.framework */; };
 		CD96099B22153E4500FED70A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD96099A22153E4500FED70A /* UIKit.framework */; };
+		CDBD4D2522BA297000DF1911 /* UIView+DeFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBD4D2422BA297000DF1911 /* UIView+DeFrame.m */; };
 		CDD45BC8221FC3A2001B5ECB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD45BC7221FC3A2001B5ECB /* WebKit.framework */; };
 		CDD5FCAA21E0644700D72368 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD5FCA921E0644700D72368 /* AppDelegate.m */; };
 		CDD5FCAD21E0644700D72368 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD5FCAC21E0644700D72368 /* ViewController.m */; };
@@ -79,6 +80,9 @@
 		CD96099622153E1B00FED70A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CD96099822153E4000FED70A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CD96099A22153E4500FED70A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CDBD4D2322BA297000DF1911 /* UIView+DeFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+DeFrame.h"; sourceTree = "<group>"; };
+		CDBD4D2422BA297000DF1911 /* UIView+DeFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+DeFrame.m"; sourceTree = "<group>"; };
+		CDBD4D2622BA2C4000DF1911 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CDD45BC7221FC3A2001B5ECB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CDD5FCA521E0644700D72368 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD5FCA821E0644700D72368 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,7 +141,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CD16A11E228BDADD009C5FA6 /* Collection */ = {
+		CD16A11E228BDADD009C5FA6 /* collection */ = {
 			isa = PBXGroup;
 			children = (
 				CDE88FBE22B76D35002BC71E /* cell */,
@@ -146,7 +150,7 @@
 				CD16A122228BDB71009C5FA6 /* EDJOrderView.h */,
 				CD16A123228BDB71009C5FA6 /* EDJOrderView.m */,
 			);
-			path = Collection;
+			path = collection;
 			sourceTree = "<group>";
 		};
 		CD4D1A1222B9FECF003A89CA /* react */ = {
@@ -211,6 +215,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CDBD4D2222BA295800DF1911 /* frame */ = {
+			isa = PBXGroup;
+			children = (
+				CDBD4D2322BA297000DF1911 /* UIView+DeFrame.h */,
+				CDBD4D2422BA297000DF1911 /* UIView+DeFrame.m */,
+			);
+			path = frame;
+			sourceTree = "<group>";
+		};
 		CDD5FC9C21E0644700D72368 = {
 			isa = PBXGroup;
 			children = (
@@ -241,7 +254,8 @@
 				CD4D1A2222BA08AD003A89CA /* vcs */,
 				CD4D1A1222B9FECF003A89CA /* react */,
 				CDE88FB122B76068002BC71E /* components */,
-				CD16A11E228BDADD009C5FA6 /* Collection */,
+				CD16A11E228BDADD009C5FA6 /* collection */,
+				CDBD4D2622BA2C4000DF1911 /* PrefixHeader.pch */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -267,6 +281,7 @@
 		CDE88FB122B76068002BC71E /* components */ = {
 			isa = PBXGroup;
 			children = (
+				CDBD4D2222BA295800DF1911 /* frame */,
 				CDE88FB822B765E9002BC71E /* net */,
 			);
 			path = components;
@@ -479,6 +494,7 @@
 				CDD5FCAA21E0644700D72368 /* AppDelegate.m in Sources */,
 				CDE88FB622B76089002BC71E /* UIApplication+NetComponents.m in Sources */,
 				CDF5C25A228D0DB000FF64AC /* EDJOrderDatasource.m in Sources */,
+				CDBD4D2522BA297000DF1911 /* UIView+DeFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +667,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = N59KJ676HE;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Demo/PrefixHeader.pch;
 				INFOPLIST_FILE = Demo/res/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -672,6 +690,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 36NQVYW7H2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Demo/PrefixHeader.pch;
 				INFOPLIST_FILE = Demo/res/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (

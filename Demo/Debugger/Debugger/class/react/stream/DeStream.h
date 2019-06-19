@@ -10,10 +10,14 @@
 
 @protocol DeStream <NSObject>
 - (instancetype)map:(id (^)(id x))transform;
+- (instancetype)filter:(BOOL (^)(id x))transform;
 @end
 
-@interface DeStream : NSObject <DeStream>
+@interface DeStream : NSObject
 
 @end
 
+@interface DeStream (DeStream) <DeStream>
+
+@end
 
