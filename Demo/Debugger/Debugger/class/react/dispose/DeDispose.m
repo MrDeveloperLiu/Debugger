@@ -7,6 +7,7 @@
 //
 
 #import "DeDispose.h"
+#import "DeReact.h"
 
 @interface DeDispose (){
 @protected
@@ -17,12 +18,13 @@
 
 @implementation DeDispose
 - (void)dealloc{
-    
+    [[DeDebugRefCount ref] removeRef:self];
 }
 
 - (instancetype)initWithBlock:(dispatch_block_t)block{
     self = [super init];
     self.block = block;
+    [[DeDebugRefCount ref] addRef:self];
     return self;
 }
 
@@ -82,7 +84,7 @@
 @implementation DeComboneDispose
 
 + (DeComboneDispose *)comboneDispose{
-    return [self new];
+    return [[self alloc] initWithBlock:nil];
 }
 
 - (BOOL)isDisposed{

@@ -17,5 +17,6 @@
 #import "DeSubject.h"
 
 #import "NSObject+DeDealloc.h"
+#import "DeDebugRefCount.h"
 
 #endif /* DeReact_h */

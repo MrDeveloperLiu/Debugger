@@ -27,10 +27,12 @@
 
     //fuck !  it's very comfortable
     __weak __typeof(self) ws = self;
-    DeDispose *disponse = [self.textField.de_textSignal subscribeNext:^(id x) {
-        if ([x isKindOfClass:[UITextField class]]) {
-            ws.textView.text = [(UITextField *)x text];
-        }        
+    
+    DeDispose *disponse =
+    [[self.textField.de_textSignal map:^id(UITextField *x) {
+        return x.text;
+    }] subscribeNext:^(id x) {
+        ws.textView.text = x;
     }];
     [self.deallocDispose addDispose:disponse];
 }

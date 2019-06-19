@@ -17,6 +17,9 @@
 @end
 
 @implementation DeScheduler
+- (void)dealloc{
+    [[DeDebugRefCount ref] removeRef:self];
+}
 
 - (instancetype)initWithName:(NSString *)name queue:(dispatch_queue_t)queue{
     self = [super init];
@@ -33,6 +36,7 @@
             _name = DeSchedulerDeafaultName;
         }
     }
+    [[DeDebugRefCount ref] addRef:self];
     return self;
 }
 

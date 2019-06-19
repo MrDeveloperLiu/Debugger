@@ -14,9 +14,6 @@
 @end
 
 @implementation DeSignal
-- (void)dealloc{
-    
-}
 
 + (DeSignal *)createSignal:(DeSignalBlock)signal{
     DeSignal *s = [[self alloc] init];
@@ -54,5 +51,31 @@
 - (DeDispose *)subscribeNext:(DeSubscriblerNextBlock)next error:(DeSubscriblerErrorBlock)error completed:(DeSubscriblerCompletedBlock)completed{
     DeSubscribler *subscriber = [DeSubscribler subscribleWithNext:next error:error completed:completed];
     return [self subscribe:subscriber];
+}
+@end
+
+@implementation DeSignal (Protocol)
+- (instancetype)map:(id (^)(id))transform{
+    NSParameterAssert(transform);
+    
+    return [DeSignal createSignal:^DeDispose *(id<DeSubscribler> subscribler) {
+        
+        DeComboneDispose *dispose = [DeComboneDispose comboneDispose];
+        
+        DeDispose *mapDispose = [self subscribeNext:^(id x) {
+            id next = transform(x);
+            [subscribler sendNext:next];
+        } error:^(NSError *error) {
+            [dispose dispose];
+            [subscribler sendError:error];
+        } completed:^{
+            [dispose dispose];
+            [subscribler sendCompleted];
+        }];
+        
+        [dispose addDispose:mapDispose];
+        
+        return dispose;
+    }];
 }
 @end

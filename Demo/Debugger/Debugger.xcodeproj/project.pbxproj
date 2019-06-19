@@ -61,6 +61,8 @@
 		CD4EA9C722A767D20052FD9A /* DeFileDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4EA9C522A767D20052FD9A /* DeFileDirectory.m */; };
 		CD4EA9CE22A789E60052FD9A /* DeProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4EA9CC22A789E60052FD9A /* DeProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD4EA9CF22A789E60052FD9A /* DeProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4EA9CD22A789E60052FD9A /* DeProxy.m */; };
+		CDBD4D1822BA1ABA00DF1911 /* DeDebugRefCount.h in Headers */ = {isa = PBXBuildFile; fileRef = CDBD4D1622BA1ABA00DF1911 /* DeDebugRefCount.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDBD4D1922BA1ABA00DF1911 /* DeDebugRefCount.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBD4D1722BA1ABA00DF1911 /* DeDebugRefCount.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		CD4EA9C522A767D20052FD9A /* DeFileDirectory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeFileDirectory.m; sourceTree = "<group>"; };
 		CD4EA9CC22A789E60052FD9A /* DeProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeProxy.h; sourceTree = "<group>"; };
 		CD4EA9CD22A789E60052FD9A /* DeProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeProxy.m; sourceTree = "<group>"; };
+		CDBD4D1622BA1ABA00DF1911 /* DeDebugRefCount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeDebugRefCount.h; sourceTree = "<group>"; };
+		CDBD4D1722BA1ABA00DF1911 /* DeDebugRefCount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeDebugRefCount.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,20 +225,13 @@
 			isa = PBXGroup;
 			children = (
 				CD4D19FB22B8C36E003A89CA /* DeReact.h */,
-				CD4D1A0E22B9F6A0003A89CA /* DeSubject.h */,
-				CD4D1A0F22B9F6A0003A89CA /* DeSubject.m */,
-				CD4D19FD22B8C5CF003A89CA /* DeStream.h */,
-				CD4D19FE22B8C5CF003A89CA /* DeStream.m */,
-				CD4D19E922B88C96003A89CA /* DeSignal.h */,
-				CD4D19EB22B88CA9003A89CA /* DeSignal.m */,
-				CD4D19ED22B8B2F3003A89CA /* DeSubscribler.h */,
-				CD4D19EE22B8B2F3003A89CA /* DeSubscribler.m */,
-				CD4D19F622B8B4A5003A89CA /* DeDispose.h */,
-				CD4D19F722B8B4A5003A89CA /* DeDispose.m */,
-				CD4D1A0622B8CC3C003A89CA /* DeScheduler.h */,
-				CD4D1A0722B8CC3C003A89CA /* DeScheduler.m */,
 				CD4D1A0A22B9D13C003A89CA /* NSObject+DeDealloc.h */,
 				CD4D1A0B22B9D13C003A89CA /* NSObject+DeDealloc.m */,
+				CDBD4D1F22BA224F00DF1911 /* schedule */,
+				CDBD4D1E22BA222900DF1911 /* dispose */,
+				CDBD4D1D22BA221E00DF1911 /* subscrible */,
+				CDBD4D1C22BA221300DF1911 /* debug */,
+				CDBD4D1B22BA220A00DF1911 /* stream */,
 			);
 			path = react;
 			sourceTree = "<group>";
@@ -311,6 +308,55 @@
 			path = log;
 			sourceTree = "<group>";
 		};
+		CDBD4D1B22BA220A00DF1911 /* stream */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D1A0E22B9F6A0003A89CA /* DeSubject.h */,
+				CD4D1A0F22B9F6A0003A89CA /* DeSubject.m */,
+				CD4D19FD22B8C5CF003A89CA /* DeStream.h */,
+				CD4D19FE22B8C5CF003A89CA /* DeStream.m */,
+				CD4D19E922B88C96003A89CA /* DeSignal.h */,
+				CD4D19EB22B88CA9003A89CA /* DeSignal.m */,
+			);
+			path = stream;
+			sourceTree = "<group>";
+		};
+		CDBD4D1C22BA221300DF1911 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				CDBD4D1622BA1ABA00DF1911 /* DeDebugRefCount.h */,
+				CDBD4D1722BA1ABA00DF1911 /* DeDebugRefCount.m */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		CDBD4D1D22BA221E00DF1911 /* subscrible */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D19ED22B8B2F3003A89CA /* DeSubscribler.h */,
+				CD4D19EE22B8B2F3003A89CA /* DeSubscribler.m */,
+			);
+			path = subscrible;
+			sourceTree = "<group>";
+		};
+		CDBD4D1E22BA222900DF1911 /* dispose */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D19F622B8B4A5003A89CA /* DeDispose.h */,
+				CD4D19F722B8B4A5003A89CA /* DeDispose.m */,
+			);
+			path = dispose;
+			sourceTree = "<group>";
+		};
+		CDBD4D1F22BA224F00DF1911 /* schedule */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D1A0622B8CC3C003A89CA /* DeScheduler.h */,
+				CD4D1A0722B8CC3C003A89CA /* DeScheduler.m */,
+			);
+			path = schedule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -343,6 +389,7 @@
 				CD4D19EF22B8B2F3003A89CA /* DeSubscribler.h in Headers */,
 				CD4EA9C322A7679C0052FD9A /* DeFileLogger.h in Headers */,
 				CD4D1A1022B9F6A0003A89CA /* DeSubject.h in Headers */,
+				CDBD4D1822BA1ABA00DF1911 /* DeDebugRefCount.h in Headers */,
 				CD4D1A0822B8CC3C003A89CA /* DeScheduler.h in Headers */,
 				CD4EA9A622A7610A0052FD9A /* Debugger.h in Headers */,
 			);
@@ -446,6 +493,7 @@
 			files = (
 				CD4D1A0922B8CC3C003A89CA /* DeScheduler.m in Sources */,
 				CD4D19EC22B88CA9003A89CA /* DeSignal.m in Sources */,
+				CDBD4D1922BA1ABA00DF1911 /* DeDebugRefCount.m in Sources */,
 				CD011B2322AF81AB00E823E0 /* DeHTTPInvalidResponseError.m in Sources */,
 				CD283FD522A9022000D46EEF /* DeHTTPManager.m in Sources */,
 				CD011B2F22AF8E2A00E823E0 /* DeHTTPJsonInvalidParamterError.m in Sources */,

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol DeStream <NSObject>
-
+- (instancetype)map:(id (^)(id x))transform;
 @end
 
 @interface DeStream : NSObject <DeStream>
