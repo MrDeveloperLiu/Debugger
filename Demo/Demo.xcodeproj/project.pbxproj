@@ -10,6 +10,10 @@
 		CD16A121228BDB38009C5FA6 /* EDJLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CD16A120228BDB37009C5FA6 /* EDJLayout.m */; };
 		CD16A124228BDB71009C5FA6 /* EDJOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD16A123228BDB71009C5FA6 /* EDJOrderView.m */; };
 		CD16A127228BE139009C5FA6 /* EDJLayoutItems.m in Sources */ = {isa = PBXBuildFile; fileRef = CD16A126228BE139009C5FA6 /* EDJLayoutItems.m */; };
+		CD375FE022BB3A2100985C20 /* DelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD375FDF22BB3A2100985C20 /* DelegateViewController.m */; };
+		CD375FEA22BB3DEF00985C20 /* DifferentHiddenImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = CD375FE922BB3DEF00985C20 /* DifferentHiddenImpl.m */; };
+		CD375FED22BB3E0400985C20 /* DifferentColorImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = CD375FEC22BB3E0400985C20 /* DifferentColorImpl.m */; };
+		CD375FF022BB3E1D00985C20 /* DifferentImplViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD375FEF22BB3E1D00985C20 /* DifferentImplViewController.m */; };
 		CD4D1A1A22B9FEFB003A89CA /* UIControl+DeReact.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D1A1922B9FEFB003A89CA /* UIControl+DeReact.m */; };
 		CD4D1A1E22BA021D003A89CA /* TextFiledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D1A1D22BA021D003A89CA /* TextFiledViewController.m */; };
 		CD4EA9B822A761990052FD9A /* Debugger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4EA9B522A7612B0052FD9A /* Debugger.framework */; };
@@ -71,6 +75,15 @@
 		CD16A123228BDB71009C5FA6 /* EDJOrderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJOrderView.m; sourceTree = "<group>"; };
 		CD16A125228BE139009C5FA6 /* EDJLayoutItems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EDJLayoutItems.h; path = ../EDJLayoutItems.h; sourceTree = "<group>"; };
 		CD16A126228BE139009C5FA6 /* EDJLayoutItems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EDJLayoutItems.m; path = ../EDJLayoutItems.m; sourceTree = "<group>"; };
+		CD375FDE22BB3A2100985C20 /* DelegateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelegateViewController.h; sourceTree = "<group>"; };
+		CD375FDF22BB3A2100985C20 /* DelegateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelegateViewController.m; sourceTree = "<group>"; };
+		CD375FE122BB3D0200985C20 /* DifferentImplProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DifferentImplProtocol.h; sourceTree = "<group>"; };
+		CD375FE822BB3DEF00985C20 /* DifferentHiddenImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DifferentHiddenImpl.h; sourceTree = "<group>"; };
+		CD375FE922BB3DEF00985C20 /* DifferentHiddenImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DifferentHiddenImpl.m; sourceTree = "<group>"; };
+		CD375FEB22BB3E0400985C20 /* DifferentColorImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DifferentColorImpl.h; sourceTree = "<group>"; };
+		CD375FEC22BB3E0400985C20 /* DifferentColorImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DifferentColorImpl.m; sourceTree = "<group>"; };
+		CD375FEE22BB3E1D00985C20 /* DifferentImplViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DifferentImplViewController.h; sourceTree = "<group>"; };
+		CD375FEF22BB3E1D00985C20 /* DifferentImplViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DifferentImplViewController.m; sourceTree = "<group>"; };
 		CD4D1A1822B9FEFB003A89CA /* UIControl+DeReact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+DeReact.h"; sourceTree = "<group>"; };
 		CD4D1A1922B9FEFB003A89CA /* UIControl+DeReact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+DeReact.m"; sourceTree = "<group>"; };
 		CD4D1A1C22BA021D003A89CA /* TextFiledViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFiledViewController.h; sourceTree = "<group>"; };
@@ -151,6 +164,22 @@
 				CD16A123228BDB71009C5FA6 /* EDJOrderView.m */,
 			);
 			path = collection;
+			sourceTree = "<group>";
+		};
+		CD375FDD22BB3A0800985C20 /* sample */ = {
+			isa = PBXGroup;
+			children = (
+				CD375FDE22BB3A2100985C20 /* DelegateViewController.h */,
+				CD375FDF22BB3A2100985C20 /* DelegateViewController.m */,
+				CD375FE122BB3D0200985C20 /* DifferentImplProtocol.h */,
+				CD375FE822BB3DEF00985C20 /* DifferentHiddenImpl.h */,
+				CD375FE922BB3DEF00985C20 /* DifferentHiddenImpl.m */,
+				CD375FEB22BB3E0400985C20 /* DifferentColorImpl.h */,
+				CD375FEC22BB3E0400985C20 /* DifferentColorImpl.m */,
+				CD375FEE22BB3E1D00985C20 /* DifferentImplViewController.h */,
+				CD375FEF22BB3E1D00985C20 /* DifferentImplViewController.m */,
+			);
+			path = sample;
 			sourceTree = "<group>";
 		};
 		CD4D1A1222B9FECF003A89CA /* react */ = {
@@ -249,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				CD4EA9AF22A7612B0052FD9A /* Debugger.xcodeproj */,
+				CD375FDD22BB3A0800985C20 /* sample */,
 				CD4D1A2622BA08C9003A89CA /* other */,
 				CD4D1A2522BA08B6003A89CA /* res */,
 				CD4D1A2222BA08AD003A89CA /* vcs */,
@@ -485,12 +515,16 @@
 				CD4D1A1E22BA021D003A89CA /* TextFiledViewController.m in Sources */,
 				CDD5FCAD21E0644700D72368 /* ViewController.m in Sources */,
 				CDD5FCB821E0644900D72368 /* main.m in Sources */,
+				CD375FEA22BB3DEF00985C20 /* DifferentHiddenImpl.m in Sources */,
 				CDF5C257228D0C5600FF64AC /* EDJOrderViewCell.m in Sources */,
 				CD16A127228BE139009C5FA6 /* EDJLayoutItems.m in Sources */,
 				CD4D1A1A22B9FEFB003A89CA /* UIControl+DeReact.m in Sources */,
+				CD375FED22BB3E0400985C20 /* DifferentColorImpl.m in Sources */,
 				CD16A121228BDB38009C5FA6 /* EDJLayout.m in Sources */,
 				CDF5C254228D099900FF64AC /* EDJLayoutItem.m in Sources */,
 				CD16A124228BDB71009C5FA6 /* EDJOrderView.m in Sources */,
+				CD375FE022BB3A2100985C20 /* DelegateViewController.m in Sources */,
+				CD375FF022BB3E1D00985C20 /* DifferentImplViewController.m in Sources */,
 				CDD5FCAA21E0644700D72368 /* AppDelegate.m in Sources */,
 				CDE88FB622B76089002BC71E /* UIApplication+NetComponents.m in Sources */,
 				CDF5C25A228D0DB000FF64AC /* EDJOrderDatasource.m in Sources */,

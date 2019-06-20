@@ -33,7 +33,7 @@
     //fuck !  it's very comfortable
     __weak __typeof(self) ws = self;
     
-    DeSignal *signal = [[self.textField.de_textSignal map:^id(UITextField *x) {
+    DeDispose *disponse = [[[self.textField.de_textSignal map:^id(UITextField *x) {
         return x.text;
     }] filter:^BOOL(NSString *x) {
         if (x.length <= 0) {
@@ -41,8 +41,7 @@
             return YES;
         }
         return NO;
-    }];
-    DeDispose *disponse = [signal subscribeNext:^(id x) {
+    }] subscribeNext:^(id x) {
         ws.textView.text = [NSString stringWithFormat:@"检索：%@", x];
     }];
     [self.deallocDispose addDispose:disponse];
