@@ -53,16 +53,14 @@ dispatch_queue_t DeHTTPManagerProcessingQueue(){
     return self;
 }
 
-- (DeHTTPOperation *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(id)paramters successBlock:(DeHTTPDataTaskSuccessBlock)successBlock failedBlock:(DeHTTPDataTaskFailedBlock)failedBlock{
 
-    if ([self.reachablity notReachable]) { //无网络错误
-        if (failedBlock) {
-            failedBlock(nil, nil, [DeHTTPNotReachableError error]);
-        }
-        return nil;
-    }
+
+- (DeHTTPOperation *)requestWithBaseUrl:(NSURL *)url
+                                 method:(NSString *)method
+                              paramters:(id)paramters
+                           successBlock:(DeHTTPDataTaskSuccessBlock)successBlock
+                            failedBlock:(DeHTTPDataTaskFailedBlock)failedBlock{
     
-    __weak __typeof(self) ws = self;
     NSError *requestSerializerError = nil;
     NSMutableURLRequest *request = [_requestSerializer requestWithBaseUrl:url
                                                                    method:method
@@ -74,7 +72,20 @@ dispatch_queue_t DeHTTPManagerProcessingQueue(){
         }
         return nil;
     }
+    return [self requestWithRequest:request successBlock:successBlock failedBlock:failedBlock];
+}
+
+- (DeHTTPOperation *)requestWithRequest:(NSURLRequest *)request
+                           successBlock:(DeHTTPDataTaskSuccessBlock)successBlock
+                            failedBlock:(DeHTTPDataTaskFailedBlock)failedBlock{
     
+    if ([self.reachablity notReachable]) { //无网络错误
+        if (failedBlock) {
+            failedBlock(nil, nil, [DeHTTPNotReachableError error]);
+        }
+        return nil;
+    }
+    __weak __typeof(self) ws = self;
     DeHTTPOperation *operation = [[DeHTTPOperation alloc] initWithRequest:request manager:self successBlock:^(DeHTTPDataTask *task, NSURLResponse *response, id data) {
         
         NSError *responseSerializerError = nil;
@@ -105,7 +116,9 @@ dispatch_queue_t DeHTTPManagerProcessingQueue(){
     
     [self postNotification:DeHTTPManagerProcessingNotification task:operation.task userInfo:nil];
     return operation;
+
 }
+
 
 - (void)postNotification:(NSString *)name task:(DeHTTPDataTask *)task userInfo:(NSDictionary *)userInfo{
     dispatch_queue_t queue = _processQueue ?: DeHTTPManagerProcessingQueue();

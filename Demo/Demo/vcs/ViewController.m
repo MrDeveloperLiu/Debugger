@@ -34,13 +34,8 @@
     
     [self.view addSubview:self.collectionView];
     self.collectionView.frame = self.view.bounds;
-    /*
-    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
-    NSDictionary *paramters = @{@"1" : @"中文", @"2" : @"English"};
-    [NETComp requestWithBaseUrl:url method:kHTTPMethodPOST paramters:paramters successBlock:^(id<NetTask> task, NSURLResponse *response, id data) {
-    } failedBlock:^(id<NetTask> task, NSURLResponse *response, NSError *error) {
-    }];
-     */
+
+
     NSMutableArray *datas = @[@[@"1-1", @"1-2"].mutableCopy,
                               @[@"frp"].mutableCopy,
                               @[@"delegate", @"color", @"hidden"].mutableCopy

@@ -9,7 +9,6 @@
 #import "DifferentImplProtocol.h"
 
 
-
 @interface DifferentHiddenImpl : NSObject <DifferentImplProtocol>
 
 @end

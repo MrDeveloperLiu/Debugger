@@ -14,6 +14,10 @@
 
 @implementation DelegateViewController
 
+- (void)dealloc{
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -25,6 +29,17 @@
     btn.width = 100;
     btn.height = 50;
     btn.center = self.view.center;
+    
+    
+    NSDictionary *paramters = @{@"1" : @"中文", @"2" : @"English"};
+    DeDispose *dispose = [[APP de_networkSignal:@"https://www.baidu.com" method:kHTTPMethodPOST parameters:paramters] subscribeNext:^(id x) {
+        NSLog(@"net: %@", x);
+    } error:^(NSError *error) {
+        NSLog(@"net: %@", error);
+    } completed:^{
+        NSLog(@"net complete");
+    }];
+    [self.deallocDispose addDispose:dispose];
 }
 
 - (void)btnAction:(id)sender{

@@ -11,7 +11,6 @@
 
 @protocol DifferentImplProtocol <NSObject>
 
-
 - (UIButton *)centerButton;
 
 - (void)doIt:(id)sender;

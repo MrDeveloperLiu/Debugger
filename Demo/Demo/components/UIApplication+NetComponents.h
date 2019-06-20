@@ -10,7 +10,8 @@
 #import <Debugger/Debugger.h>
 #import "NetComponents.h"
 
-#define NETComp [[UIApplication sharedApplication] networkManager]
+#define APP [UIApplication sharedApplication]
+#define NETComp APP.networkManager
 
 @interface UIApplication (NetComponents)
 
@@ -19,6 +20,9 @@
 - (void)networkInstall;
 - (void)networkUninstall;
 
+- (DeSignal *)de_networkSignal:(NSString *)url method:(NSString *)method parameters:(id)parameters;
+- (DeSignal *)de_networkRequest:(NSURLRequest *)request;
 @end
+
 
 

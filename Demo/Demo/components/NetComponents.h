@@ -10,6 +10,8 @@
 
 
 @protocol NetOperation <NSObject>
+- (BOOL)isExecuting;
+- (BOOL)isFinished;
 - (void)cancel;
 @end
 
@@ -26,6 +28,11 @@ typedef void(^NetComponentsFailedBlock)(id<NetTask> task, NSURLResponse *respons
                              paramters:(id)paramters
                           successBlock:(NetComponentsSuccessBlock)successBlock
                            failedBlock:(NetComponentsFailedBlock)failedBlock;
+
+- (id<NetOperation>)requestWithRequest:(NSURLRequest *)request
+                           successBlock:(NetComponentsSuccessBlock)successBlock
+                            failedBlock:(NetComponentsFailedBlock)failedBlock;
+
 @end
 
 

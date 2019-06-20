@@ -36,6 +36,14 @@ FOUNDATION_EXPORT NSString *const DeHTTPManagerUserinfoTaskKey;
 
 + (DeHTTPManager *)manager;
 
-- (DeHTTPOperation *)requestWithBaseUrl:(NSURL *)url method:(NSString *)method paramters:(id)paramters successBlock:(DeHTTPDataTaskSuccessBlock)successBlock failedBlock:(DeHTTPDataTaskFailedBlock)failedBlock;
+- (DeHTTPOperation *)requestWithBaseUrl:(NSURL *)url
+                                 method:(NSString *)method
+                              paramters:(id)paramters
+                           successBlock:(DeHTTPDataTaskSuccessBlock)successBlock
+                            failedBlock:(DeHTTPDataTaskFailedBlock)failedBlock;
+
+- (DeHTTPOperation *)requestWithRequest:(NSURLRequest *)request
+                           successBlock:(DeHTTPDataTaskSuccessBlock)successBlock
+                            failedBlock:(DeHTTPDataTaskFailedBlock)failedBlock;
 @end
 

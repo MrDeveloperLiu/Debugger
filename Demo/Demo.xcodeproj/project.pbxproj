@@ -194,6 +194,7 @@
 		CD4D1A2222BA08AD003A89CA /* vcs */ = {
 			isa = PBXGroup;
 			children = (
+				CD375FDD22BB3A0800985C20 /* sample */,
 				CDD5FCAB21E0644700D72368 /* ViewController.h */,
 				CDD5FCAC21E0644700D72368 /* ViewController.m */,
 				CD4D1A1C22BA021D003A89CA /* TextFiledViewController.h */,
@@ -278,7 +279,6 @@
 			isa = PBXGroup;
 			children = (
 				CD4EA9AF22A7612B0052FD9A /* Debugger.xcodeproj */,
-				CD375FDD22BB3A0800985C20 /* sample */,
 				CD4D1A2622BA08C9003A89CA /* other */,
 				CD4D1A2522BA08B6003A89CA /* res */,
 				CD4D1A2222BA08AD003A89CA /* vcs */,
