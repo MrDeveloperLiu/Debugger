@@ -82,6 +82,23 @@
     return self.center.y;
 }
 
+- (void)setOrigin:(CGPoint)origin{
+    CGRect frame = self.frame;
+    frame.origin = origin;
+    self.frame = frame;
+}
+- (CGPoint)origin{
+    return self.frame.origin;
+}
+
+- (void)setSize:(CGSize)size{
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+- (CGSize)size{
+    return self.frame.size;
+}
 
 
 - (UIView * (^)(CGFloat))de_leading{
@@ -135,6 +152,18 @@
 - (UIView *(^)(CGPoint))de_center{
     return ^UIView *(CGPoint v){
         self.center = v;
+        return self;
+    };
+}
+- (UIView * (^)(CGPoint))de_origin{
+    return ^UIView *(CGPoint v){
+        self.origin = v;
+        return self;
+    };
+}
+- (UIView * (^)(CGSize))de_size{
+    return ^UIView *(CGSize v){
+        self.size = v;
         return self;
     };
 }

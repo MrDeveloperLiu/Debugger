@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
 
     UIButton *btn = [_impl centerButton];
     [btn addTarget:_impl action:@selector(doIt:) forControlEvents:UIControlEventTouchUpInside];

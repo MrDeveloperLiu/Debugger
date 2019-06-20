@@ -49,16 +49,24 @@
 @property (nonatomic, assign) CGFloat centerX;
 @property (nonatomic, assign) CGFloat centerY;
 
+@property (nonatomic, assign) CGPoint origin;
+@property (nonatomic, assign) CGSize size;
 
 - (UIView * (^)(CGFloat))de_leading;
 - (UIView * (^)(CGFloat))de_trailing;
+
 - (UIView * (^)(CGFloat))de_top;
 - (UIView * (^)(CGFloat))de_bottom;
+
 - (UIView * (^)(CGFloat))de_width;
 - (UIView * (^)(CGFloat))de_height;
+
 - (UIView * (^)(CGFloat))de_centerX;
 - (UIView * (^)(CGFloat))de_centerY;
 - (UIView * (^)(CGPoint))de_center;
+
+- (UIView * (^)(CGPoint))de_origin;
+- (UIView * (^)(CGSize))de_size;
 @end
 
 

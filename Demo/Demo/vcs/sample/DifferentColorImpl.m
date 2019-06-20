@@ -16,7 +16,7 @@
 
 - (UIButton *)centerButton{
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-    [btn setTitle:@"Hidden It" forState:UIControlStateNormal];
+    [btn setTitle:@"Color It" forState:UIControlStateNormal];
     _btn = btn;
     return btn;
 }

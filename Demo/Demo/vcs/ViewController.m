@@ -28,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     NSLog(@"屏幕 %@", NSStringFromCGRect([UIScreen mainScreen].bounds));
     
     self.title = @"Main";

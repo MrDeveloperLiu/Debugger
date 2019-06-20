@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
 
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
     [btn setTitle:@"I Hate" forState:UIControlStateNormal];
@@ -33,11 +34,11 @@
     
     NSDictionary *paramters = @{@"1" : @"中文", @"2" : @"English"};
     DeDispose *dispose = [[APP de_networkSignal:@"https://www.baidu.com" method:kHTTPMethodPOST parameters:paramters] subscribeNext:^(id x) {
-        NSLog(@"net: %@", x);
+//        NSLog(@"net: %@", x);
     } error:^(NSError *error) {
-        NSLog(@"net: %@", error);
+//        NSLog(@"net: %@", error);
     } completed:^{
-        NSLog(@"net complete");
+//        NSLog(@"net complete");
     }];
     [self.deallocDispose addDispose:dispose];
 }
