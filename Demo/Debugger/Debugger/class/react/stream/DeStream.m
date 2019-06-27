@@ -30,5 +30,7 @@
 - (instancetype)filter:(BOOL (^)(id x))transform{
     return nil;
 }
-
+- (instancetype)bind:(id (^)(id x))transform{
+    return nil;
+}
 @end

@@ -68,6 +68,15 @@
     [requestTask URLSession:session dataTask:dataTask didReceiveData:data];
 }
 
+//重定向
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task willPerformHTTPRedirection:(NSHTTPURLResponse *)response newRequest:(NSURLRequest *)request completionHandler:(void (^)(NSURLRequest * _Nullable))completionHandler{
+    if (self.redirectBlock) {
+        self.redirectBlock(request, response, completionHandler);
+    }else{
+        completionHandler(request);
+    }
+}
+
 - (DeHTTPDataTask *)dataTaskWithRequest:(NSURLRequest *)request success:(DeHTTPDataTaskSuccessBlock)success failed:(DeHTTPDataTaskFailedBlock)failed{
     NSURLSessionDataTask *dataTask = [_session dataTaskWithRequest:request];
     DeHTTPDataTask *requestTask = [[DeHTTPDataTask alloc] initWithDataTask:dataTask

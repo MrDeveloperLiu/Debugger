@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "DeHTTPDataTask.h"
 
+typedef void (^DeHTTPNetworkRedirectCompleteHandler)(NSURLRequest *request);
+typedef void (^DeHTTPNetworkRedirectBlock) (NSURLRequest *request, NSURLResponse *response, DeHTTPNetworkRedirectCompleteHandler handler);
+
 @interface DeHTTPNetwork : NSObject
 
+@property (nonatomic, copy) DeHTTPNetworkRedirectBlock redirectBlock;
 @property (nonatomic, strong, readonly) NSMutableDictionary *tasks;
 @property (nonatomic, strong, readonly) NSOperationQueue *delegateQueue;
 @property (nonatomic, strong, readonly) NSURLSession *session;

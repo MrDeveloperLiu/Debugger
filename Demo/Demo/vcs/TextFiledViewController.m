@@ -26,10 +26,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     self.title = @"Search";
-    
-    UIView *v = [UIView new]; v.backgroundColor = [UIColor redColor];
-    [self.view addSubview:v];
-    v.de_width(self.view.width).de_height(60).de_centerX(self.view.centerX).de_bottom(self.view.bottom - 10);
 
     //fuck !  it's very comfortable
     __weak __typeof(self) ws = self;
