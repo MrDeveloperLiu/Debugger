@@ -65,8 +65,10 @@
 		CD7FDB2D22C30D1F0085D7D5 /* DeAsyncGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7FDB2B22C30D1F0085D7D5 /* DeAsyncGroup.m */; };
 		CD7FDB3022C30D270085D7D5 /* DeAsync.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7FDB2E22C30D270085D7D5 /* DeAsync.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD7FDB3122C30D270085D7D5 /* DeAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7FDB2F22C30D270085D7D5 /* DeAsync.m */; };
-		CDBD4D1822BA1ABA00DF1911 /* DeDebugRefCount.h in Headers */ = {isa = PBXBuildFile; fileRef = CDBD4D1622BA1ABA00DF1911 /* DeDebugRefCount.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CDBD4D1922BA1ABA00DF1911 /* DeDebugRefCount.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBD4D1722BA1ABA00DF1911 /* DeDebugRefCount.m */; };
+		CDAB714922C6086B0093FBFA /* DeLinkedNode.h in Headers */ = {isa = PBXBuildFile; fileRef = CDAB714722C6086B0093FBFA /* DeLinkedNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDAB714A22C6086B0093FBFA /* DeLinkedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAB714822C6086B0093FBFA /* DeLinkedNode.m */; };
+		CDAB714E22C60BE70093FBFA /* DeLinkedList.h in Headers */ = {isa = PBXBuildFile; fileRef = CDAB714C22C60BE70093FBFA /* DeLinkedList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDAB714F22C60BE70093FBFA /* DeLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAB714D22C60BE70093FBFA /* DeLinkedList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,8 +143,10 @@
 		CD7FDB2B22C30D1F0085D7D5 /* DeAsyncGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeAsyncGroup.m; sourceTree = "<group>"; };
 		CD7FDB2E22C30D270085D7D5 /* DeAsync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeAsync.h; sourceTree = "<group>"; };
 		CD7FDB2F22C30D270085D7D5 /* DeAsync.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeAsync.m; sourceTree = "<group>"; };
-		CDBD4D1622BA1ABA00DF1911 /* DeDebugRefCount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeDebugRefCount.h; sourceTree = "<group>"; };
-		CDBD4D1722BA1ABA00DF1911 /* DeDebugRefCount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeDebugRefCount.m; sourceTree = "<group>"; };
+		CDAB714722C6086B0093FBFA /* DeLinkedNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeLinkedNode.h; sourceTree = "<group>"; };
+		CDAB714822C6086B0093FBFA /* DeLinkedNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeLinkedNode.m; sourceTree = "<group>"; };
+		CDAB714C22C60BE70093FBFA /* DeLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeLinkedList.h; sourceTree = "<group>"; };
+		CDAB714D22C60BE70093FBFA /* DeLinkedList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeLinkedList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,7 +242,6 @@
 				CDBD4D1F22BA224F00DF1911 /* schedule */,
 				CDBD4D1E22BA222900DF1911 /* dispose */,
 				CDBD4D1D22BA221E00DF1911 /* subscrible */,
-				CDBD4D1C22BA221300DF1911 /* debug */,
 				CDBD4D1B22BA220A00DF1911 /* stream */,
 			);
 			path = react;
@@ -296,6 +299,7 @@
 		CD4EA9BA22A761E20052FD9A /* class */ = {
 			isa = PBXGroup;
 			children = (
+				CDAB714622C605FF0093FBFA /* data */,
 				CD7FDB2922C30D0C0085D7D5 /* async */,
 				CD4D19DB22B87E13003A89CA /* react */,
 				CD283FC522A8E11800D46EEF /* network */,
@@ -328,6 +332,25 @@
 			path = async;
 			sourceTree = "<group>";
 		};
+		CDAB714622C605FF0093FBFA /* data */ = {
+			isa = PBXGroup;
+			children = (
+				CDAB715022C60BF60093FBFA /* linked-list */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		CDAB715022C60BF60093FBFA /* linked-list */ = {
+			isa = PBXGroup;
+			children = (
+				CDAB714722C6086B0093FBFA /* DeLinkedNode.h */,
+				CDAB714822C6086B0093FBFA /* DeLinkedNode.m */,
+				CDAB714C22C60BE70093FBFA /* DeLinkedList.h */,
+				CDAB714D22C60BE70093FBFA /* DeLinkedList.m */,
+			);
+			path = "linked-list";
+			sourceTree = "<group>";
+		};
 		CDBD4D1B22BA220A00DF1911 /* stream */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,15 +362,6 @@
 				CD4D19EB22B88CA9003A89CA /* DeSignal.m */,
 			);
 			path = stream;
-			sourceTree = "<group>";
-		};
-		CDBD4D1C22BA221300DF1911 /* debug */ = {
-			isa = PBXGroup;
-			children = (
-				CDBD4D1622BA1ABA00DF1911 /* DeDebugRefCount.h */,
-				CDBD4D1722BA1ABA00DF1911 /* DeDebugRefCount.m */,
-			);
-			path = debug;
 			sourceTree = "<group>";
 		};
 		CDBD4D1D22BA221E00DF1911 /* subscrible */ = {
@@ -408,10 +422,11 @@
 				CD4D19FF22B8C5CF003A89CA /* DeStream.h in Headers */,
 				CD4D19EF22B8B2F3003A89CA /* DeSubscribler.h in Headers */,
 				CD4EA9C322A7679C0052FD9A /* DeFileLogger.h in Headers */,
+				CDAB714E22C60BE70093FBFA /* DeLinkedList.h in Headers */,
+				CDAB714922C6086B0093FBFA /* DeLinkedNode.h in Headers */,
 				CD4D1A1022B9F6A0003A89CA /* DeSubject.h in Headers */,
 				CD7FDB2C22C30D1F0085D7D5 /* DeAsyncGroup.h in Headers */,
 				CD7FDB3022C30D270085D7D5 /* DeAsync.h in Headers */,
-				CDBD4D1822BA1ABA00DF1911 /* DeDebugRefCount.h in Headers */,
 				CD4D1A0822B8CC3C003A89CA /* DeScheduler.h in Headers */,
 				CD4EA9A622A7610A0052FD9A /* Debugger.h in Headers */,
 			);
@@ -515,7 +530,6 @@
 			files = (
 				CD4D1A0922B8CC3C003A89CA /* DeScheduler.m in Sources */,
 				CD4D19EC22B88CA9003A89CA /* DeSignal.m in Sources */,
-				CDBD4D1922BA1ABA00DF1911 /* DeDebugRefCount.m in Sources */,
 				CD011B2322AF81AB00E823E0 /* DeHTTPInvalidResponseError.m in Sources */,
 				CD283FD522A9022000D46EEF /* DeHTTPManager.m in Sources */,
 				CD011B2F22AF8E2A00E823E0 /* DeHTTPJsonInvalidParamterError.m in Sources */,
@@ -533,6 +547,7 @@
 				CD7FDB2D22C30D1F0085D7D5 /* DeAsyncGroup.m in Sources */,
 				CD4D1A0022B8C5CF003A89CA /* DeStream.m in Sources */,
 				CD283FDA22A9042900D46EEF /* DeHTTPResponseSerializer.m in Sources */,
+				CDAB714A22C6086B0093FBFA /* DeLinkedNode.m in Sources */,
 				CD011B1822AF729100E823E0 /* DeReachable.m in Sources */,
 				CD283FCD22A8E17C00D46EEF /* DeHTTPDataTask.m in Sources */,
 				CD011B2B22AF8BF800E823E0 /* NSError+DeErrorMsg.m in Sources */,
@@ -540,6 +555,7 @@
 				CD4EA9C222A7679C0052FD9A /* DeFileLogger.m in Sources */,
 				CD283FD122A8E18900D46EEF /* DeHTTPOperation.m in Sources */,
 				CD4EA9CF22A789E60052FD9A /* DeProxy.m in Sources */,
+				CDAB714F22C60BE70093FBFA /* DeLinkedList.m in Sources */,
 				CD283FDE22A9051C00D46EEF /* DeHTTPRequestSerializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

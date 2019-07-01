@@ -11,12 +11,11 @@
 
 @implementation DeStream
 - (void)dealloc{
-    [[DeDebugRefCount ref] removeRef:self];
+
 }
 
 - (instancetype)init{
     self = [super init];
-    [[DeDebugRefCount ref] addRef:self];
     return self;
 }
 @end

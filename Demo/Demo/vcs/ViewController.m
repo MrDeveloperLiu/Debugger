@@ -11,9 +11,6 @@
 #import "UIApplication+NetComponents.h"
 
 @interface ViewController () <UICollectionViewDelegate>
-{
-    __weak UIView *_tobeNeedHiddenView;
-}
 @property (nonatomic, strong) EDJOrderView *collectionView;
 @property (nonatomic, strong) EDJOrderDatasource *ds;
 @end
@@ -35,11 +32,9 @@
 
 
     NSMutableArray *datas = @[@[@"1-1", @"1-2"].mutableCopy,
-                              @[@"frp"].mutableCopy,
-                              @[@"delegate", @"color", @"hidden"].mutableCopy
+                              @[@"frp"].mutableCopy
                               ].mutableCopy;
     self.ds.datas = datas;
-    
 }
 
 - (EDJOrderView *)collectionView{
