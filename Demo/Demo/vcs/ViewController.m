@@ -35,6 +35,7 @@
                               @[@"frp"].mutableCopy
                               ].mutableCopy;
     self.ds.datas = datas;
+    
 }
 
 - (EDJOrderView *)collectionView{

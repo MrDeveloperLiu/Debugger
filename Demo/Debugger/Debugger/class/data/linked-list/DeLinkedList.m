@@ -20,8 +20,8 @@
 - (void)_insertObjectAtHead:(id)object{
     DeLinkedNode *headNode = _head;
     DeLinkedNode *node = [DeLinkedNode nodeWithValue:object];
+    node.next = headNode;
     _head = node;
-    _head.next = headNode;
 }
 
 - (void)_insertObjectAtTrail:(id)object{
@@ -31,6 +31,7 @@
     }
     DeLinkedNode *node = [DeLinkedNode nodeWithValue:object];
     lastNode.next = node;
+    _trail = node;
 }
 
 - (void)_insertObjectAtMiddle:(id)object index:(NSUInteger)index{
@@ -146,5 +147,28 @@
     return nil;
 }
 
-
+- (id)objectAtIndex:(NSUInteger)index{
+    if (index >= 0 && index <= _count) {
+        if (index == 0) {
+            return _head;
+        }else if (index == _count){
+            return _trail;
+        }
+        return [self _objectAtMiddle:index];
+    }
+    NSAssert(NO, @"Error index:%zd beyond count:%zd", index, _count);
+    return nil;
+}
+- (id)_objectAtMiddle:(NSUInteger)index{
+    DeLinkedNode *current = _head;
+    NSUInteger idx = 1;
+    while (current.next) {
+        current = current.next;
+        if (idx == index) {
+            break;
+        }
+        idx ++;
+    }
+    return current;
+}
 @end

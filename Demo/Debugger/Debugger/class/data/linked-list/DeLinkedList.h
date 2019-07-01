@@ -14,6 +14,7 @@
 @property (nonatomic, assign) NSUInteger count;
 
 @property (nonatomic, strong, readonly) DeLinkedNode <ObjectType>* head;
+@property (nonatomic, strong, readonly) DeLinkedNode <ObjectType>* trail;
 
 - (void)appendObject:(ObjectType)object;
 - (ObjectType)removeHead;
@@ -21,5 +22,7 @@
 
 - (void)insertObject:(ObjectType)object atIndex:(NSUInteger)index;
 - (ObjectType)removeObjectAtIndex:(NSUInteger)index;
+
+- (ObjectType)objectAtIndex:(NSUInteger)index;
 @end
 
