@@ -10,7 +10,7 @@
 #import "EDJOrderViewCell.h"
 #import "EDJOrderDatasource.h"
 #import "EDJBusinessView.h"
-#import "NSArray+EDJTransformable.h"
+#import "NSArray+GenericMath.h"
 #import "NSObject+EDJTransformable.h"
 
 typedef void(^EDJOrderViewBlock)(CGSize s);

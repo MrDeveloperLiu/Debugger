@@ -26,9 +26,18 @@
     self = [super initWithFrame:frame style:style];
     [self configure];
     [self addSubview:self.insetView];
-    UIEdgeInsets inset = UIEdgeInsetsMake(self.insetView.frame.size.height - 30, 0, kIphoneXSafeBottom, 0);
-    [self setContentInset:inset];
+    [self setBottomOffset:30];
     return self;
+}
+
+- (void)setBottomOffset:(CGFloat)bottomOffset{
+    if (_bottomOffset != bottomOffset) {
+        _bottomOffset = bottomOffset;
+        
+        CGFloat t = self.insetView.frame.size.height - bottomOffset;
+        UIEdgeInsets inset = UIEdgeInsetsMake(t, 0, kIphoneXSafeBottom, 0);
+        [self setContentInset:inset];
+    }
 }
 
 - (void)configure{

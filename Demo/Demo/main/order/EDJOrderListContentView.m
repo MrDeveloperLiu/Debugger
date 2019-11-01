@@ -22,9 +22,8 @@
     self.collectionView.frame = self.bounds;
     
     [self addSubview:self.selectView];
-    self.selectView.frame = self.bounds;
-    
-    self.selectView.height = 50;
+    self.selectView.frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), 50);
+        
     return self;
 }
 
@@ -73,5 +72,9 @@
         self.contentSelectBlock(collectionView, indexPath);
     }
 }
+
+
+
+
 
 @end

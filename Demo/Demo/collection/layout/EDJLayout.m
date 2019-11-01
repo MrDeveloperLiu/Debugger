@@ -158,12 +158,14 @@
 }
 
 - (nullable NSArray<__kindof UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect{
-    return self.layoutManager.attributes;
+    NSMutableArray *attributes = self.layoutManager.attributes;
+    return attributes;
 }
 
 - (nullable UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
     EDJLayoutItems *items = [self.layoutManager.items objectAtIndex:indexPath.section];
-    return [items.attributes objectAtIndex:indexPath.row];
+    EDJLayoutItem *item = [items.attributes objectAtIndex:indexPath.row];
+    return item;
 }
 
 - (CGSize)collectionViewContentSize{

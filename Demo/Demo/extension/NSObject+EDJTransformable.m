@@ -10,10 +10,16 @@
 
 @implementation NSObject (EDJTransformable)
 
-- (EDJOrderItem *)toItem{
+- (EDJOrderItem *)transform_toOrderItem{
     EDJOrderItem *it = [EDJOrderItem new];
     it.content = self;
     return it;
+}
+
+- (EDJListObject *)transform_toListItem{
+    EDJListObject *obj = [EDJListObject new];
+    obj.content = self;
+    return obj;
 }
 
 @end

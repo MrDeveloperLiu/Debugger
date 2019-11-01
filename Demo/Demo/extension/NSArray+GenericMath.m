@@ -6,13 +6,13 @@
 //  Copyright © 2019 liu. All rights reserved.
 //
 
-#import "NSArray+EDJTransformable.h"
+#import "NSArray+GenericMath.h"
 
 
 
-@implementation NSArray (EDJTransformable)
+@implementation NSArray (GenericMath)
 
-- (NSMutableArray *)containerMap:(EDJTransformableBlock)usingBlock{
+- (NSMutableArray *)containerMap:(EDJGenericMathBlock)usingBlock{
     NSInteger count = self.count;
     if (count <= 0) {
         return nil;
@@ -31,7 +31,7 @@
     return temp;
 }
 
-- (NSMutableArray *)map:(EDJTransformableMapBlock)usingBlock{
+- (NSMutableArray *)map:(EDJGenericMathMapBlock)usingBlock{
     NSInteger count = self.count;
     if (count <= 0) {
         return nil;

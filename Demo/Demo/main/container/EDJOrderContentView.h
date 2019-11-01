@@ -11,6 +11,7 @@
 
 @interface EDJOrderContentView : EDJTableTouchView
 @property (nonatomic, strong, readonly) EDJOrderContainer *insetView;
+@property (nonatomic, assign) CGFloat bottomOffset;
 @end
 
 

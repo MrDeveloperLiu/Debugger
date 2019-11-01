@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "EDJCollectionDatasource.h"
 
-@interface EDJOrderListContentView : UIView
+@interface EDJOrderListContentView : UIView <UICollectionViewDelegate>
 
 @property (nonatomic, strong) EDJOrderView *collectionView;
 @property (nonatomic, strong) EDJBusinessView *selectView;

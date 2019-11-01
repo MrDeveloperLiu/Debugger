@@ -23,6 +23,7 @@
     }
     return _layoutManager;
 }
+
 @end
 
 @implementation EDJOrderLayoutManager
