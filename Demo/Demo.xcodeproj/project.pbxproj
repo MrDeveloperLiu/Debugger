@@ -7,12 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD16A121228BDB38009C5FA6 /* EDJLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CD16A120228BDB37009C5FA6 /* EDJLayout.m */; };
+		CD01D18423682B48002D5250 /* res.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD01D18323682B48002D5250 /* res.bundle */; };
+		CD01D19623683F83002D5250 /* EDJOrderDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = CD01D18B23683F83002D5250 /* EDJOrderDatasource.m */; };
+		CD01D19723683F83002D5250 /* EDJOrderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD01D18D23683F83002D5250 /* EDJOrderViewCell.m */; };
+		CD01D19823683F83002D5250 /* EDJLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CD01D19323683F83002D5250 /* EDJLayout.m */; };
+		CD01D19923683F83002D5250 /* EDJLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CD01D19423683F83002D5250 /* EDJLayoutItem.m */; };
+		CD01D19A23683F83002D5250 /* EDJLayoutItems.m in Sources */ = {isa = PBXBuildFile; fileRef = CD01D19523683F83002D5250 /* EDJLayoutItems.m */; };
+		CD07A81F22D4912700E0DEB4 /* JSApplication.js in Resources */ = {isa = PBXBuildFile; fileRef = CD07A81E22D4912700E0DEB4 /* JSApplication.js */; };
+		CD07A82522D491D200E0DEB4 /* DeJavaScriptCore.m in Sources */ = {isa = PBXBuildFile; fileRef = CD07A82422D491D200E0DEB4 /* DeJavaScriptCore.m */; };
+		CD07A84D22D5DEB900E0DEB4 /* JSValue+DeJSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = CD07A84C22D5DEB900E0DEB4 /* JSValue+DeJSCore.m */; };
 		CD16A124228BDB71009C5FA6 /* EDJOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD16A123228BDB71009C5FA6 /* EDJOrderView.m */; };
-		CD16A127228BE139009C5FA6 /* EDJLayoutItems.m in Sources */ = {isa = PBXBuildFile; fileRef = CD16A126228BE139009C5FA6 /* EDJLayoutItems.m */; };
+		CD2F1179235995C1001C602A /* EDJTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2F1178235995C1001C602A /* EDJTouchView.m */; };
+		CD2F117E235996F8001C602A /* EDJOrderContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2F117D235996F8001C602A /* EDJOrderContainer.m */; };
+		CD2F118123599713001C602A /* EDJOrderContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2F118023599713001C602A /* EDJOrderContentView.m */; };
 		CD4D1A1A22B9FEFB003A89CA /* UIControl+DeReact.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D1A1922B9FEFB003A89CA /* UIControl+DeReact.m */; };
 		CD4D1A1E22BA021D003A89CA /* TextFiledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D1A1D22BA021D003A89CA /* TextFiledViewController.m */; };
 		CD4EA9B822A761990052FD9A /* Debugger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4EA9B522A7612B0052FD9A /* Debugger.framework */; };
+		CD6232292359983300B569F9 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6232282359983300B569F9 /* OrderViewController.m */; };
+		CD62322F2359A8DC00B569F9 /* EDJOrderListView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD62322E2359A8DC00B569F9 /* EDJOrderListView.m */; };
+		CD6232322359A92B00B569F9 /* EDJOrderListContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6232312359A92A00B569F9 /* EDJOrderListContentView.m */; };
+		CD6282B922D868C500EC608F /* DeAppWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6282B822D868C500EC608F /* DeAppWindow.m */; };
+		CD6282BE22D88F7D00EC608F /* JSContext+DeJSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6282BD22D88F7D00EC608F /* JSContext+DeJSCore.m */; };
+		CD6282C422D89BEB00EC608F /* DeLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6282C322D89BEB00EC608F /* DeLogger.m */; };
+		CD791EA22368498400EB8908 /* EDJCollectionDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = CD791EA12368498400EB8908 /* EDJCollectionDatasource.m */; };
+		CD791EA523695A0000EB8908 /* EDJOrderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CD791EA423695A0000EB8908 /* EDJOrderItem.m */; };
+		CD791EAA2369910600EB8908 /* EDJBusinessView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD791EA92369910600EB8908 /* EDJBusinessView.m */; };
+		CD791EB02369935600EB8908 /* NSObject+EDJTransformable.m in Sources */ = {isa = PBXBuildFile; fileRef = CD791EAF2369935600EB8908 /* NSObject+EDJTransformable.m */; };
+		CD791EB32369936000EB8908 /* NSArray+EDJTransformable.m in Sources */ = {isa = PBXBuildFile; fileRef = CD791EB22369936000EB8908 /* NSArray+EDJTransformable.m */; };
+		CD791EB823699A4A00EB8908 /* NSBundle+File.m in Sources */ = {isa = PBXBuildFile; fileRef = CD791EB723699A4A00EB8908 /* NSBundle+File.m */; };
+		CD791EBB23699B9200EB8908 /* NSData+Bundle.m in Sources */ = {isa = PBXBuildFile; fileRef = CD791EBA23699B9200EB8908 /* NSData+Bundle.m */; };
+		CD7CB816235D687500ED29AD /* EDJOrderLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7CB815235D687500ED29AD /* EDJOrderLayout.m */; };
+		CD7CB82C235D9C7800ED29AD /* EDJToastTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7CB827235D9C7700ED29AD /* EDJToastTipsView.m */; };
+		CD7CB82D235D9C7800ED29AD /* EDJToastTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7CB82A235D9C7800ED29AD /* EDJToastTitleView.m */; };
+		CD7CB82E235D9C7800ED29AD /* EDJToastContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7CB82B235D9C7800ED29AD /* EDJToastContentView.m */; };
 		CD7E46372283FDFD00AC2784 /* test.xml in Resources */ = {isa = PBXBuildFile; fileRef = CD7E46362283FDFD00AC2784 /* test.xml */; };
 		CD96099722153E1B00FED70A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD96099622153E1B00FED70A /* CoreGraphics.framework */; };
 		CD96099922153E4000FED70A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD96099822153E4000FED70A /* Foundation.framework */; };
@@ -28,9 +55,6 @@
 		CDD5FCC221E0644A00D72368 /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD5FCC121E0644A00D72368 /* DemoTests.m */; };
 		CDD5FCCD21E0644A00D72368 /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD5FCCC21E0644A00D72368 /* DemoUITests.m */; };
 		CDE88FB622B76089002BC71E /* UIApplication+NetComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE88FB522B76089002BC71E /* UIApplication+NetComponents.m */; };
-		CDF5C254228D099900FF64AC /* EDJLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF5C253228D099900FF64AC /* EDJLayoutItem.m */; };
-		CDF5C257228D0C5600FF64AC /* EDJOrderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF5C256228D0C5600FF64AC /* EDJOrderViewCell.m */; };
-		CDF5C25A228D0DB000FF64AC /* EDJOrderDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF5C259228D0DB000FF64AC /* EDJOrderDatasource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,17 +89,70 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CD16A11F228BDB37009C5FA6 /* EDJLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EDJLayout.h; path = ../EDJLayout.h; sourceTree = "<group>"; };
-		CD16A120228BDB37009C5FA6 /* EDJLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EDJLayout.m; path = ../EDJLayout.m; sourceTree = "<group>"; };
+		CD01D18323682B48002D5250 /* res.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = res.bundle; sourceTree = "<group>"; };
+		CD01D18A23683F83002D5250 /* EDJOrderDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDJOrderDatasource.h; sourceTree = "<group>"; };
+		CD01D18B23683F83002D5250 /* EDJOrderDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDJOrderDatasource.m; sourceTree = "<group>"; };
+		CD01D18D23683F83002D5250 /* EDJOrderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDJOrderViewCell.m; sourceTree = "<group>"; };
+		CD01D18E23683F83002D5250 /* EDJOrderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDJOrderViewCell.h; sourceTree = "<group>"; };
+		CD01D19023683F83002D5250 /* EDJLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDJLayoutItem.h; sourceTree = "<group>"; };
+		CD01D19123683F83002D5250 /* EDJLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDJLayout.h; sourceTree = "<group>"; };
+		CD01D19223683F83002D5250 /* EDJLayoutItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDJLayoutItems.h; sourceTree = "<group>"; };
+		CD01D19323683F83002D5250 /* EDJLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDJLayout.m; sourceTree = "<group>"; };
+		CD01D19423683F83002D5250 /* EDJLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDJLayoutItem.m; sourceTree = "<group>"; };
+		CD01D19523683F83002D5250 /* EDJLayoutItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDJLayoutItems.m; sourceTree = "<group>"; };
+		CD07A81E22D4912700E0DEB4 /* JSApplication.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = JSApplication.js; sourceTree = "<group>"; };
+		CD07A82322D491D200E0DEB4 /* DeJavaScriptCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeJavaScriptCore.h; sourceTree = "<group>"; };
+		CD07A82422D491D200E0DEB4 /* DeJavaScriptCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeJavaScriptCore.m; sourceTree = "<group>"; };
+		CD07A84B22D5DEB900E0DEB4 /* JSValue+DeJSCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSValue+DeJSCore.h"; sourceTree = "<group>"; };
+		CD07A84C22D5DEB900E0DEB4 /* JSValue+DeJSCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JSValue+DeJSCore.m"; sourceTree = "<group>"; };
 		CD16A122228BDB71009C5FA6 /* EDJOrderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJOrderView.h; sourceTree = "<group>"; };
 		CD16A123228BDB71009C5FA6 /* EDJOrderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJOrderView.m; sourceTree = "<group>"; };
-		CD16A125228BE139009C5FA6 /* EDJLayoutItems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EDJLayoutItems.h; path = ../EDJLayoutItems.h; sourceTree = "<group>"; };
-		CD16A126228BE139009C5FA6 /* EDJLayoutItems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EDJLayoutItems.m; path = ../EDJLayoutItems.m; sourceTree = "<group>"; };
+		CD2F1177235995C1001C602A /* EDJTouchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJTouchView.h; sourceTree = "<group>"; };
+		CD2F1178235995C1001C602A /* EDJTouchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJTouchView.m; sourceTree = "<group>"; };
+		CD2F117C235996F8001C602A /* EDJOrderContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJOrderContainer.h; sourceTree = "<group>"; };
+		CD2F117D235996F8001C602A /* EDJOrderContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJOrderContainer.m; sourceTree = "<group>"; };
+		CD2F117F23599713001C602A /* EDJOrderContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJOrderContentView.h; sourceTree = "<group>"; };
+		CD2F118023599713001C602A /* EDJOrderContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJOrderContentView.m; sourceTree = "<group>"; };
 		CD4D1A1822B9FEFB003A89CA /* UIControl+DeReact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+DeReact.h"; sourceTree = "<group>"; };
 		CD4D1A1922B9FEFB003A89CA /* UIControl+DeReact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+DeReact.m"; sourceTree = "<group>"; };
 		CD4D1A1C22BA021D003A89CA /* TextFiledViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFiledViewController.h; sourceTree = "<group>"; };
 		CD4D1A1D22BA021D003A89CA /* TextFiledViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFiledViewController.m; sourceTree = "<group>"; };
 		CD4EA9AF22A7612B0052FD9A /* Debugger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Debugger.xcodeproj; path = Debugger/Debugger.xcodeproj; sourceTree = SOURCE_ROOT; };
+		CD6232272359983300B569F9 /* OrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		CD6232282359983300B569F9 /* OrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
+		CD62322D2359A8DC00B569F9 /* EDJOrderListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJOrderListView.h; sourceTree = "<group>"; };
+		CD62322E2359A8DC00B569F9 /* EDJOrderListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJOrderListView.m; sourceTree = "<group>"; };
+		CD6232302359A92A00B569F9 /* EDJOrderListContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJOrderListContentView.h; sourceTree = "<group>"; };
+		CD6232312359A92A00B569F9 /* EDJOrderListContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJOrderListContentView.m; sourceTree = "<group>"; };
+		CD6282B722D868C500EC608F /* DeAppWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeAppWindow.h; sourceTree = "<group>"; };
+		CD6282B822D868C500EC608F /* DeAppWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeAppWindow.m; sourceTree = "<group>"; };
+		CD6282BC22D88F7D00EC608F /* JSContext+DeJSCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSContext+DeJSCore.h"; sourceTree = "<group>"; };
+		CD6282BD22D88F7D00EC608F /* JSContext+DeJSCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JSContext+DeJSCore.m"; sourceTree = "<group>"; };
+		CD6282C222D89BEB00EC608F /* DeLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeLogger.h; sourceTree = "<group>"; };
+		CD6282C322D89BEB00EC608F /* DeLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeLogger.m; sourceTree = "<group>"; };
+		CD791EA02368498400EB8908 /* EDJCollectionDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJCollectionDatasource.h; sourceTree = "<group>"; };
+		CD791EA12368498400EB8908 /* EDJCollectionDatasource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJCollectionDatasource.m; sourceTree = "<group>"; };
+		CD791EA323695A0000EB8908 /* EDJOrderItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJOrderItem.h; sourceTree = "<group>"; };
+		CD791EA423695A0000EB8908 /* EDJOrderItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJOrderItem.m; sourceTree = "<group>"; };
+		CD791EA82369910600EB8908 /* EDJBusinessView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJBusinessView.h; sourceTree = "<group>"; };
+		CD791EA92369910600EB8908 /* EDJBusinessView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJBusinessView.m; sourceTree = "<group>"; };
+		CD791EAE2369935600EB8908 /* NSObject+EDJTransformable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+EDJTransformable.h"; sourceTree = "<group>"; };
+		CD791EAF2369935600EB8908 /* NSObject+EDJTransformable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EDJTransformable.m"; sourceTree = "<group>"; };
+		CD791EB12369936000EB8908 /* NSArray+EDJTransformable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+EDJTransformable.h"; sourceTree = "<group>"; };
+		CD791EB22369936000EB8908 /* NSArray+EDJTransformable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+EDJTransformable.m"; sourceTree = "<group>"; };
+		CD791EB42369936800EB8908 /* EDJTransformable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJTransformable.h; sourceTree = "<group>"; };
+		CD791EB623699A4A00EB8908 /* NSBundle+File.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+File.h"; sourceTree = "<group>"; };
+		CD791EB723699A4A00EB8908 /* NSBundle+File.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+File.m"; sourceTree = "<group>"; };
+		CD791EB923699B9200EB8908 /* NSData+Bundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Bundle.h"; sourceTree = "<group>"; };
+		CD791EBA23699B9200EB8908 /* NSData+Bundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Bundle.m"; sourceTree = "<group>"; };
+		CD7CB814235D687500ED29AD /* EDJOrderLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDJOrderLayout.h; sourceTree = "<group>"; };
+		CD7CB815235D687500ED29AD /* EDJOrderLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDJOrderLayout.m; sourceTree = "<group>"; };
+		CD7CB826235D9C7700ED29AD /* EDJToastTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDJToastTipsView.h; sourceTree = "<group>"; };
+		CD7CB827235D9C7700ED29AD /* EDJToastTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDJToastTipsView.m; sourceTree = "<group>"; };
+		CD7CB828235D9C7700ED29AD /* EDJToastContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDJToastContentView.h; sourceTree = "<group>"; };
+		CD7CB829235D9C7800ED29AD /* EDJToastTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDJToastTitleView.h; sourceTree = "<group>"; };
+		CD7CB82A235D9C7800ED29AD /* EDJToastTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDJToastTitleView.m; sourceTree = "<group>"; };
+		CD7CB82B235D9C7800ED29AD /* EDJToastContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDJToastContentView.m; sourceTree = "<group>"; };
 		CD7E46362283FDFD00AC2784 /* test.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = test.xml; sourceTree = "<group>"; };
 		CD96099622153E1B00FED70A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CD96099822153E4000FED70A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -103,12 +180,6 @@
 		CDE88FB422B76089002BC71E /* UIApplication+NetComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIApplication+NetComponents.h"; path = "../UIApplication+NetComponents.h"; sourceTree = "<group>"; };
 		CDE88FB522B76089002BC71E /* UIApplication+NetComponents.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+NetComponents.m"; path = "../UIApplication+NetComponents.m"; sourceTree = "<group>"; };
 		CDE88FB722B762C2002BC71E /* NetComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NetComponents.h; path = ../NetComponents.h; sourceTree = "<group>"; };
-		CDF5C252228D099900FF64AC /* EDJLayoutItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EDJLayoutItem.h; path = ../EDJLayoutItem.h; sourceTree = "<group>"; };
-		CDF5C253228D099900FF64AC /* EDJLayoutItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EDJLayoutItem.m; path = ../EDJLayoutItem.m; sourceTree = "<group>"; };
-		CDF5C255228D0C5600FF64AC /* EDJOrderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EDJOrderViewCell.h; path = ../EDJOrderViewCell.h; sourceTree = "<group>"; };
-		CDF5C256228D0C5600FF64AC /* EDJOrderViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EDJOrderViewCell.m; path = ../EDJOrderViewCell.m; sourceTree = "<group>"; };
-		CDF5C258228D0DB000FF64AC /* EDJOrderDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EDJOrderDatasource.h; path = ../EDJOrderDatasource.h; sourceTree = "<group>"; };
-		CDF5C259228D0DB000FF64AC /* EDJOrderDatasource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EDJOrderDatasource.m; path = ../EDJOrderDatasource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,16 +212,120 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD01D18823683F28002D5250 /* order_support */ = {
+			isa = PBXGroup;
+			children = (
+				CD01D18C23683F83002D5250 /* cell */,
+				CD01D18A23683F83002D5250 /* EDJOrderDatasource.h */,
+				CD01D18B23683F83002D5250 /* EDJOrderDatasource.m */,
+				CD16A122228BDB71009C5FA6 /* EDJOrderView.h */,
+				CD16A123228BDB71009C5FA6 /* EDJOrderView.m */,
+				CD7CB814235D687500ED29AD /* EDJOrderLayout.h */,
+				CD7CB815235D687500ED29AD /* EDJOrderLayout.m */,
+				CD791EA82369910600EB8908 /* EDJBusinessView.h */,
+				CD791EA92369910600EB8908 /* EDJBusinessView.m */,
+			);
+			path = order_support;
+			sourceTree = "<group>";
+		};
+		CD01D18923683F83002D5250 /* ds */ = {
+			isa = PBXGroup;
+			children = (
+				CD791EA02368498400EB8908 /* EDJCollectionDatasource.h */,
+				CD791EA12368498400EB8908 /* EDJCollectionDatasource.m */,
+			);
+			path = ds;
+			sourceTree = "<group>";
+		};
+		CD01D18C23683F83002D5250 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CD01D18E23683F83002D5250 /* EDJOrderViewCell.h */,
+				CD01D18D23683F83002D5250 /* EDJOrderViewCell.m */,
+				CD791EA323695A0000EB8908 /* EDJOrderItem.h */,
+				CD791EA423695A0000EB8908 /* EDJOrderItem.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		CD01D18F23683F83002D5250 /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				CD01D19023683F83002D5250 /* EDJLayoutItem.h */,
+				CD01D19423683F83002D5250 /* EDJLayoutItem.m */,
+				CD01D19123683F83002D5250 /* EDJLayout.h */,
+				CD01D19323683F83002D5250 /* EDJLayout.m */,
+				CD01D19223683F83002D5250 /* EDJLayoutItems.h */,
+				CD01D19523683F83002D5250 /* EDJLayoutItems.m */,
+			);
+			path = layout;
+			sourceTree = "<group>";
+		};
+		CD07A81B22D490E600E0DEB4 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				CD07A83622D5A65300E0DEB4 /* exports */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		CD07A83622D5A65300E0DEB4 /* exports */ = {
+			isa = PBXGroup;
+			children = (
+				CD07A81E22D4912700E0DEB4 /* JSApplication.js */,
+				CD07A82322D491D200E0DEB4 /* DeJavaScriptCore.h */,
+				CD07A82422D491D200E0DEB4 /* DeJavaScriptCore.m */,
+				CD6282B722D868C500EC608F /* DeAppWindow.h */,
+				CD6282B822D868C500EC608F /* DeAppWindow.m */,
+				CD07A84B22D5DEB900E0DEB4 /* JSValue+DeJSCore.h */,
+				CD07A84C22D5DEB900E0DEB4 /* JSValue+DeJSCore.m */,
+				CD6282BC22D88F7D00EC608F /* JSContext+DeJSCore.h */,
+				CD6282BD22D88F7D00EC608F /* JSContext+DeJSCore.m */,
+				CD6282C222D89BEB00EC608F /* DeLogger.h */,
+				CD6282C322D89BEB00EC608F /* DeLogger.m */,
+			);
+			path = exports;
+			sourceTree = "<group>";
+		};
 		CD16A11E228BDADD009C5FA6 /* collection */ = {
 			isa = PBXGroup;
 			children = (
-				CDE88FBE22B76D35002BC71E /* cell */,
-				CDE88FBD22B76D29002BC71E /* ds */,
-				CDE88FBC22B76D1D002BC71E /* layout */,
-				CD16A122228BDB71009C5FA6 /* EDJOrderView.h */,
-				CD16A123228BDB71009C5FA6 /* EDJOrderView.m */,
+				CD791EAD2369933200EB8908 /* ext */,
+				CD01D18923683F83002D5250 /* ds */,
+				CD01D18F23683F83002D5250 /* layout */,
+				CD01D18823683F28002D5250 /* order_support */,
 			);
 			path = collection;
+			sourceTree = "<group>";
+		};
+		CD2F11712359957C001C602A /* main */ = {
+			isa = PBXGroup;
+			children = (
+				CD62322C2359A71B00B569F9 /* order */,
+				CD2F117B235996D7001C602A /* container */,
+				CD2F117A235996C7001C602A /* base */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		CD2F117A235996C7001C602A /* base */ = {
+			isa = PBXGroup;
+			children = (
+				CD2F1177235995C1001C602A /* EDJTouchView.h */,
+				CD2F1178235995C1001C602A /* EDJTouchView.m */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		CD2F117B235996D7001C602A /* container */ = {
+			isa = PBXGroup;
+			children = (
+				CD2F117C235996F8001C602A /* EDJOrderContainer.h */,
+				CD2F117D235996F8001C602A /* EDJOrderContainer.m */,
+				CD2F117F23599713001C602A /* EDJOrderContentView.h */,
+				CD2F118023599713001C602A /* EDJOrderContentView.m */,
+			);
+			path = container;
 			sourceTree = "<group>";
 		};
 		CD4D1A1222B9FECF003A89CA /* react */ = {
@@ -165,6 +340,8 @@
 		CD4D1A2222BA08AD003A89CA /* vcs */ = {
 			isa = PBXGroup;
 			children = (
+				CD6232272359983300B569F9 /* OrderViewController.h */,
+				CD6232282359983300B569F9 /* OrderViewController.m */,
 				CDD5FCAB21E0644700D72368 /* ViewController.h */,
 				CDD5FCAC21E0644700D72368 /* ViewController.m */,
 				CD4D1A1C22BA021D003A89CA /* TextFiledViewController.h */,
@@ -181,6 +358,7 @@
 				CDD5FCB621E0644900D72368 /* Info.plist */,
 				CDD5FCAE21E0644700D72368 /* Main.storyboard */,
 				CDD5FCB321E0644900D72368 /* LaunchScreen.storyboard */,
+				CD01D18323682B48002D5250 /* res.bundle */,
 			);
 			path = res;
 			sourceTree = "<group>";
@@ -188,6 +366,7 @@
 		CD4D1A2622BA08C9003A89CA /* other */ = {
 			isa = PBXGroup;
 			children = (
+				CD791EB523699A3A00EB8908 /* ext */,
 				CDD5FCB721E0644900D72368 /* main.m */,
 				CDD5FCA821E0644700D72368 /* AppDelegate.h */,
 				CDD5FCA921E0644700D72368 /* AppDelegate.m */,
@@ -202,6 +381,53 @@
 				CD4EA9B722A7612B0052FD9A /* DebuggerTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CD62322C2359A71B00B569F9 /* order */ = {
+			isa = PBXGroup;
+			children = (
+				CD62322D2359A8DC00B569F9 /* EDJOrderListView.h */,
+				CD62322E2359A8DC00B569F9 /* EDJOrderListView.m */,
+				CD6232302359A92A00B569F9 /* EDJOrderListContentView.h */,
+				CD6232312359A92A00B569F9 /* EDJOrderListContentView.m */,
+			);
+			path = order;
+			sourceTree = "<group>";
+		};
+		CD791EAD2369933200EB8908 /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				CD791EAE2369935600EB8908 /* NSObject+EDJTransformable.h */,
+				CD791EAF2369935600EB8908 /* NSObject+EDJTransformable.m */,
+				CD791EB12369936000EB8908 /* NSArray+EDJTransformable.h */,
+				CD791EB22369936000EB8908 /* NSArray+EDJTransformable.m */,
+				CD791EB42369936800EB8908 /* EDJTransformable.h */,
+			);
+			path = ext;
+			sourceTree = "<group>";
+		};
+		CD791EB523699A3A00EB8908 /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				CD791EB623699A4A00EB8908 /* NSBundle+File.h */,
+				CD791EB723699A4A00EB8908 /* NSBundle+File.m */,
+				CD791EB923699B9200EB8908 /* NSData+Bundle.h */,
+				CD791EBA23699B9200EB8908 /* NSData+Bundle.m */,
+			);
+			path = ext;
+			sourceTree = "<group>";
+		};
+		CD7CB819235D91B000ED29AD /* toast */ = {
+			isa = PBXGroup;
+			children = (
+				CD7CB828235D9C7700ED29AD /* EDJToastContentView.h */,
+				CD7CB82B235D9C7800ED29AD /* EDJToastContentView.m */,
+				CD7CB826235D9C7700ED29AD /* EDJToastTipsView.h */,
+				CD7CB827235D9C7700ED29AD /* EDJToastTipsView.m */,
+				CD7CB829235D9C7800ED29AD /* EDJToastTitleView.h */,
+				CD7CB82A235D9C7800ED29AD /* EDJToastTitleView.m */,
+			);
+			path = toast;
 			sourceTree = "<group>";
 		};
 		CD96099522153E1B00FED70A /* Frameworks */ = {
@@ -249,13 +475,16 @@
 			isa = PBXGroup;
 			children = (
 				CD4EA9AF22A7612B0052FD9A /* Debugger.xcodeproj */,
+				CD7CB819235D91B000ED29AD /* toast */,
+				CD07A81B22D490E600E0DEB4 /* js */,
 				CD4D1A2622BA08C9003A89CA /* other */,
 				CD4D1A2522BA08B6003A89CA /* res */,
 				CD4D1A2222BA08AD003A89CA /* vcs */,
 				CD4D1A1222B9FECF003A89CA /* react */,
 				CDE88FB122B76068002BC71E /* components */,
-				CD16A11E228BDADD009C5FA6 /* collection */,
 				CDBD4D2622BA2C4000DF1911 /* PrefixHeader.pch */,
+				CD16A11E228BDADD009C5FA6 /* collection */,
+				CD2F11712359957C001C602A /* main */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -295,37 +524,6 @@
 				CDE88FB522B76089002BC71E /* UIApplication+NetComponents.m */,
 			);
 			path = net;
-			sourceTree = "<group>";
-		};
-		CDE88FBC22B76D1D002BC71E /* layout */ = {
-			isa = PBXGroup;
-			children = (
-				CDF5C252228D099900FF64AC /* EDJLayoutItem.h */,
-				CDF5C253228D099900FF64AC /* EDJLayoutItem.m */,
-				CD16A125228BE139009C5FA6 /* EDJLayoutItems.h */,
-				CD16A126228BE139009C5FA6 /* EDJLayoutItems.m */,
-				CD16A11F228BDB37009C5FA6 /* EDJLayout.h */,
-				CD16A120228BDB37009C5FA6 /* EDJLayout.m */,
-			);
-			path = layout;
-			sourceTree = "<group>";
-		};
-		CDE88FBD22B76D29002BC71E /* ds */ = {
-			isa = PBXGroup;
-			children = (
-				CDF5C258228D0DB000FF64AC /* EDJOrderDatasource.h */,
-				CDF5C259228D0DB000FF64AC /* EDJOrderDatasource.m */,
-			);
-			path = ds;
-			sourceTree = "<group>";
-		};
-		CDE88FBE22B76D35002BC71E /* cell */ = {
-			isa = PBXGroup;
-			children = (
-				CDF5C255228D0C5600FF64AC /* EDJOrderViewCell.h */,
-				CDF5C256228D0C5600FF64AC /* EDJOrderViewCell.m */,
-			);
-			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +656,8 @@
 				CDD5FCB221E0644900D72368 /* Assets.xcassets in Resources */,
 				CDD5FCB021E0644700D72368 /* Main.storyboard in Resources */,
 				CD7E46372283FDFD00AC2784 /* test.xml in Resources */,
+				CD01D18423682B48002D5250 /* res.bundle in Resources */,
+				CD07A81F22D4912700E0DEB4 /* JSApplication.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,19 +682,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD791EBB23699B9200EB8908 /* NSData+Bundle.m in Sources */,
 				CD4D1A1E22BA021D003A89CA /* TextFiledViewController.m in Sources */,
 				CDD5FCAD21E0644700D72368 /* ViewController.m in Sources */,
 				CDD5FCB821E0644900D72368 /* main.m in Sources */,
-				CDF5C257228D0C5600FF64AC /* EDJOrderViewCell.m in Sources */,
-				CD16A127228BE139009C5FA6 /* EDJLayoutItems.m in Sources */,
+				CD62322F2359A8DC00B569F9 /* EDJOrderListView.m in Sources */,
+				CD6232322359A92B00B569F9 /* EDJOrderListContentView.m in Sources */,
+				CD07A84D22D5DEB900E0DEB4 /* JSValue+DeJSCore.m in Sources */,
+				CD07A82522D491D200E0DEB4 /* DeJavaScriptCore.m in Sources */,
+				CD791EB32369936000EB8908 /* NSArray+EDJTransformable.m in Sources */,
+				CD7CB82D235D9C7800ED29AD /* EDJToastTitleView.m in Sources */,
+				CD6232292359983300B569F9 /* OrderViewController.m in Sources */,
+				CD791EA22368498400EB8908 /* EDJCollectionDatasource.m in Sources */,
+				CD01D19623683F83002D5250 /* EDJOrderDatasource.m in Sources */,
+				CD2F118123599713001C602A /* EDJOrderContentView.m in Sources */,
+				CD2F117E235996F8001C602A /* EDJOrderContainer.m in Sources */,
+				CD01D19A23683F83002D5250 /* EDJLayoutItems.m in Sources */,
+				CD7CB816235D687500ED29AD /* EDJOrderLayout.m in Sources */,
+				CD01D19923683F83002D5250 /* EDJLayoutItem.m in Sources */,
 				CD4D1A1A22B9FEFB003A89CA /* UIControl+DeReact.m in Sources */,
-				CD16A121228BDB38009C5FA6 /* EDJLayout.m in Sources */,
-				CDF5C254228D099900FF64AC /* EDJLayoutItem.m in Sources */,
+				CD7CB82C235D9C7800ED29AD /* EDJToastTipsView.m in Sources */,
+				CD7CB82E235D9C7800ED29AD /* EDJToastContentView.m in Sources */,
+				CD791EB823699A4A00EB8908 /* NSBundle+File.m in Sources */,
+				CD6282B922D868C500EC608F /* DeAppWindow.m in Sources */,
 				CD16A124228BDB71009C5FA6 /* EDJOrderView.m in Sources */,
+				CD6282C422D89BEB00EC608F /* DeLogger.m in Sources */,
 				CDD5FCAA21E0644700D72368 /* AppDelegate.m in Sources */,
+				CD01D19723683F83002D5250 /* EDJOrderViewCell.m in Sources */,
 				CDE88FB622B76089002BC71E /* UIApplication+NetComponents.m in Sources */,
-				CDF5C25A228D0DB000FF64AC /* EDJOrderDatasource.m in Sources */,
+				CD6282BE22D88F7D00EC608F /* JSContext+DeJSCore.m in Sources */,
+				CD2F1179235995C1001C602A /* EDJTouchView.m in Sources */,
+				CD791EAA2369910600EB8908 /* EDJBusinessView.m in Sources */,
+				CD791EB02369935600EB8908 /* NSObject+EDJTransformable.m in Sources */,
+				CD791EA523695A0000EB8908 /* EDJOrderItem.m in Sources */,
 				CDBD4D2522BA297000DF1911 /* UIView+DeFrame.m in Sources */,
+				CD01D19823683F83002D5250 /* EDJLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,8 +887,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = N59KJ676HE;
+				DEVELOPMENT_TEAM = 36NQVYW7H2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Demo/PrefixHeader.pch;
 				INFOPLIST_FILE = Demo/res/Info.plist;
@@ -676,9 +899,9 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.edaijia.develop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edaijia.enterprise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = edaijia_develop;
+				PROVISIONING_PROFILE_SPECIFIER = edaijia_enterprise_develop;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -687,6 +910,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 36NQVYW7H2;

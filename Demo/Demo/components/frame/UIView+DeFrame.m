@@ -30,7 +30,7 @@
 
 - (void)setTop:(CGFloat)top{
     CGRect frame = self.frame;
-    frame.origin.y = top + kIphoneXSafeTop;
+    frame.origin.y = top;
     self.frame = frame;
 }
 - (CGFloat)top{
@@ -39,7 +39,7 @@
 
 - (void)setBottom:(CGFloat)bottom{
     CGRect frame = self.frame;
-    frame.origin.y = bottom - frame.size.height - kIphoneXSafeBottom;
+    frame.origin.y = bottom - frame.size.height;
     self.frame = frame;
 }
 - (CGFloat)bottom{

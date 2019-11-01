@@ -34,7 +34,8 @@
 //Safe T B
 #define kIphoneXSafeTop (kIphoneEdge ? kIphoneXEdgeTop: 0)
 #define kIphoneXSafeBottom (kIphoneEdge ? kIphoneXEdgeBottom: 0)
-
+//ContentRect
+#define kContentRect ((CGRect){0, kNavH, kScreenW, kScreenH - kIphoneXSafeBottom - kNavH})
 
 @interface UIView (DeFrame)
 @property (nonatomic, assign) CGFloat leading;

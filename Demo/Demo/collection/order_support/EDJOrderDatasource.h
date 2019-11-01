@@ -13,8 +13,8 @@
 @property (nonatomic, weak) EDJOrderView *collectionView;
 @property (nonatomic, weak) id <UICollectionViewDelegate> delegate;
 @property (nonatomic, strong) NSMutableArray *datas;
-- (instancetype)initWithOrderView:(EDJOrderView *)orderView delegate:(id)delegate;
-- (void)deleteItemAtIndexPath:(NSIndexPath *)indexPath;
-- (id)itemAtIndexPath:(NSIndexPath *)indexPath;
-@end
 
+- (instancetype)initWithOrderView:(EDJOrderView *)orderView delegate:(id)delegate;
+- (id)itemAtIndexPath:(NSIndexPath *)indexPath;
+- (void)deleteItemAtIndexPath:(NSIndexPath *)indexPath;
+@end

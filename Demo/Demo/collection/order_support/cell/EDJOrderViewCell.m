@@ -25,11 +25,17 @@
     return self;
 }
 
-- (void)setModel:(id)model{
+- (void)setModel:(EDJOrderItem *)model{
     _model = model;
     
     if ([model isKindOfClass:[NSString class]]) {
-        self.titleLabel.text = model;
+        self.titleLabel.text = (NSString *)model;
+    }else{
+        if ([model.content isKindOfClass:[NSString class]]) {
+            self.titleLabel.text = (NSString *)model.content;
+        }else if ([model.content isKindOfClass:[NSDictionary class]]){
+            self.titleLabel.text = model.content[@"title"];
+        }
     }
 }
 
