@@ -1,0 +1,785 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD011B0D22AF5E0600E823E0 /* NSArray+DeCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = CD011B0B22AF5E0600E823E0 /* NSArray+DeCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD011B0E22AF5E0600E823E0 /* NSArray+DeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD011B0C22AF5E0600E823E0 /* NSArray+DeCategory.m */; };
+		CD011B1122AF5E1B00E823E0 /* NSDictionary+DeCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = CD011B0F22AF5E1B00E823E0 /* NSDictionary+DeCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD011B1222AF5E1B00E823E0 /* NSDictionary+DeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD011B1022AF5E1B00E823E0 /* NSDictionary+DeCategory.m */; };
+		CD011B1722AF729100E823E0 /* DeReachable.h in Headers */ = {isa = PBXBuildFile; fileRef = CD011B1522AF729100E823E0 /* DeReachable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD011B1822AF729100E823E0 /* DeReachable.m in Sources */ = {isa = PBXBuildFile; fileRef = CD011B1622AF729100E823E0 /* DeReachable.m */; };
+		CD011B1E22AF80DA00E823E0 /* DeHTTPNotReachableError.h in Headers */ = {isa = PBXBuildFile; fileRef = CD011B1C22AF80DA00E823E0 /* DeHTTPNotReachableError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD011B1F22AF80DA00E823E0 /* DeHTTPNotReachableError.m in Sources */ = {isa = PBXBuildFile; fileRef = CD011B1D22AF80DA00E823E0 /* DeHTTPNotReachableError.m */; };
+		CD011B2222AF81AB00E823E0 /* DeHTTPInvalidResponseError.h in Headers */ = {isa = PBXBuildFile; fileRef = CD011B2022AF81AB00E823E0 /* DeHTTPInvalidResponseError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD011B2322AF81AB00E823E0 /* DeHTTPInvalidResponseError.m in Sources */ = {isa = PBXBuildFile; fileRef = CD011B2122AF81AB00E823E0 /* DeHTTPInvalidResponseError.m */; };
+		CD011B2A22AF8BF800E823E0 /* NSError+DeErrorMsg.h in Headers */ = {isa = PBXBuildFile; fileRef = CD011B2822AF8BF800E823E0 /* NSError+DeErrorMsg.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD011B2B22AF8BF800E823E0 /* NSError+DeErrorMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = CD011B2922AF8BF800E823E0 /* NSError+DeErrorMsg.m */; };
+		CD011B2E22AF8E2A00E823E0 /* DeHTTPJsonInvalidParamterError.h in Headers */ = {isa = PBXBuildFile; fileRef = CD011B2C22AF8E2A00E823E0 /* DeHTTPJsonInvalidParamterError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD011B2F22AF8E2A00E823E0 /* DeHTTPJsonInvalidParamterError.m in Sources */ = {isa = PBXBuildFile; fileRef = CD011B2D22AF8E2A00E823E0 /* DeHTTPJsonInvalidParamterError.m */; };
+		CD283FC122A8E07C00D46EEF /* DeSimpleXMLParaser.m in Sources */ = {isa = PBXBuildFile; fileRef = CD283FBD22A8E07C00D46EEF /* DeSimpleXMLParaser.m */; };
+		CD283FC222A8E07C00D46EEF /* DeSimpleXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CD283FBE22A8E07C00D46EEF /* DeSimpleXMLNode.m */; };
+		CD283FC322A8E07C00D46EEF /* DeSimpleXMLParaser.h in Headers */ = {isa = PBXBuildFile; fileRef = CD283FBF22A8E07C00D46EEF /* DeSimpleXMLParaser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD283FC422A8E07C00D46EEF /* DeSimpleXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = CD283FC022A8E07C00D46EEF /* DeSimpleXMLNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD283FC822A8E13A00D46EEF /* DeHTTPNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = CD283FC622A8E13A00D46EEF /* DeHTTPNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD283FC922A8E13A00D46EEF /* DeHTTPNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = CD283FC722A8E13A00D46EEF /* DeHTTPNetwork.m */; };
+		CD283FCC22A8E17C00D46EEF /* DeHTTPDataTask.h in Headers */ = {isa = PBXBuildFile; fileRef = CD283FCA22A8E17C00D46EEF /* DeHTTPDataTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD283FCD22A8E17C00D46EEF /* DeHTTPDataTask.m in Sources */ = {isa = PBXBuildFile; fileRef = CD283FCB22A8E17C00D46EEF /* DeHTTPDataTask.m */; };
+		CD283FD022A8E18900D46EEF /* DeHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CD283FCE22A8E18900D46EEF /* DeHTTPOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD283FD122A8E18900D46EEF /* DeHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CD283FCF22A8E18900D46EEF /* DeHTTPOperation.m */; };
+		CD283FD422A9022000D46EEF /* DeHTTPManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CD283FD222A9022000D46EEF /* DeHTTPManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD283FD522A9022000D46EEF /* DeHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD283FD322A9022000D46EEF /* DeHTTPManager.m */; };
+		CD283FD922A9042900D46EEF /* DeHTTPResponseSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = CD283FD722A9042900D46EEF /* DeHTTPResponseSerializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD283FDA22A9042900D46EEF /* DeHTTPResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD283FD822A9042900D46EEF /* DeHTTPResponseSerializer.m */; };
+		CD283FDD22A9051C00D46EEF /* DeHTTPRequestSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = CD283FDB22A9051C00D46EEF /* DeHTTPRequestSerializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD283FDE22A9051C00D46EEF /* DeHTTPRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD283FDC22A9051C00D46EEF /* DeHTTPRequestSerializer.m */; };
+		CD4D19EA22B88C96003A89CA /* DeSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4D19E922B88C96003A89CA /* DeSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4D19EC22B88CA9003A89CA /* DeSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D19EB22B88CA9003A89CA /* DeSignal.m */; };
+		CD4D19EF22B8B2F3003A89CA /* DeSubscribler.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4D19ED22B8B2F3003A89CA /* DeSubscribler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4D19F022B8B2F3003A89CA /* DeSubscribler.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D19EE22B8B2F3003A89CA /* DeSubscribler.m */; };
+		CD4D19F822B8B4A5003A89CA /* DeDispose.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4D19F622B8B4A5003A89CA /* DeDispose.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4D19F922B8B4A5003A89CA /* DeDispose.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D19F722B8B4A5003A89CA /* DeDispose.m */; };
+		CD4D19FC22B8C36E003A89CA /* DeReact.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4D19FB22B8C36E003A89CA /* DeReact.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4D19FF22B8C5CF003A89CA /* DeStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4D19FD22B8C5CF003A89CA /* DeStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4D1A0022B8C5CF003A89CA /* DeStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D19FE22B8C5CF003A89CA /* DeStream.m */; };
+		CD4D1A0822B8CC3C003A89CA /* DeScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4D1A0622B8CC3C003A89CA /* DeScheduler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4D1A0922B8CC3C003A89CA /* DeScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D1A0722B8CC3C003A89CA /* DeScheduler.m */; };
+		CD4D1A0C22B9D13C003A89CA /* NSObject+DeDealloc.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4D1A0A22B9D13C003A89CA /* NSObject+DeDealloc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4D1A0D22B9D13C003A89CA /* NSObject+DeDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D1A0B22B9D13C003A89CA /* NSObject+DeDealloc.m */; };
+		CD4D1A1022B9F6A0003A89CA /* DeSubject.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4D1A0E22B9F6A0003A89CA /* DeSubject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4D1A1122B9F6A0003A89CA /* DeSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D1A0F22B9F6A0003A89CA /* DeSubject.m */; };
+		CD4EA99F22A7610A0052FD9A /* Debugger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4EA99522A7610A0052FD9A /* Debugger.framework */; };
+		CD4EA9A422A7610A0052FD9A /* DebuggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4EA9A322A7610A0052FD9A /* DebuggerTests.m */; };
+		CD4EA9A622A7610A0052FD9A /* Debugger.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4EA99822A7610A0052FD9A /* Debugger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4EA9C222A7679C0052FD9A /* DeFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4EA9C022A7679C0052FD9A /* DeFileLogger.m */; };
+		CD4EA9C322A7679C0052FD9A /* DeFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4EA9C122A7679C0052FD9A /* DeFileLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4EA9C622A767D20052FD9A /* DeFileDirectory.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4EA9C422A767D20052FD9A /* DeFileDirectory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4EA9C722A767D20052FD9A /* DeFileDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4EA9C522A767D20052FD9A /* DeFileDirectory.m */; };
+		CD4EA9CE22A789E60052FD9A /* DeProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4EA9CC22A789E60052FD9A /* DeProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD4EA9CF22A789E60052FD9A /* DeProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4EA9CD22A789E60052FD9A /* DeProxy.m */; };
+		CD7FDB2C22C30D1F0085D7D5 /* DeAsyncGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7FDB2A22C30D1F0085D7D5 /* DeAsyncGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD7FDB2D22C30D1F0085D7D5 /* DeAsyncGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7FDB2B22C30D1F0085D7D5 /* DeAsyncGroup.m */; };
+		CD7FDB3022C30D270085D7D5 /* DeAsync.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7FDB2E22C30D270085D7D5 /* DeAsync.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD7FDB3122C30D270085D7D5 /* DeAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7FDB2F22C30D270085D7D5 /* DeAsync.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD4EA9A022A7610A0052FD9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD4EA98C22A7610A0052FD9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD4EA99422A7610A0052FD9A;
+			remoteInfo = Debugger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD011B0B22AF5E0600E823E0 /* NSArray+DeCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+DeCategory.h"; sourceTree = "<group>"; };
+		CD011B0C22AF5E0600E823E0 /* NSArray+DeCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DeCategory.m"; sourceTree = "<group>"; };
+		CD011B0F22AF5E1B00E823E0 /* NSDictionary+DeCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DeCategory.h"; sourceTree = "<group>"; };
+		CD011B1022AF5E1B00E823E0 /* NSDictionary+DeCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DeCategory.m"; sourceTree = "<group>"; };
+		CD011B1522AF729100E823E0 /* DeReachable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeReachable.h; sourceTree = "<group>"; };
+		CD011B1622AF729100E823E0 /* DeReachable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeReachable.m; sourceTree = "<group>"; };
+		CD011B1C22AF80DA00E823E0 /* DeHTTPNotReachableError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeHTTPNotReachableError.h; sourceTree = "<group>"; };
+		CD011B1D22AF80DA00E823E0 /* DeHTTPNotReachableError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeHTTPNotReachableError.m; sourceTree = "<group>"; };
+		CD011B2022AF81AB00E823E0 /* DeHTTPInvalidResponseError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeHTTPInvalidResponseError.h; sourceTree = "<group>"; };
+		CD011B2122AF81AB00E823E0 /* DeHTTPInvalidResponseError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeHTTPInvalidResponseError.m; sourceTree = "<group>"; };
+		CD011B2822AF8BF800E823E0 /* NSError+DeErrorMsg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+DeErrorMsg.h"; sourceTree = "<group>"; };
+		CD011B2922AF8BF800E823E0 /* NSError+DeErrorMsg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+DeErrorMsg.m"; sourceTree = "<group>"; };
+		CD011B2C22AF8E2A00E823E0 /* DeHTTPJsonInvalidParamterError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeHTTPJsonInvalidParamterError.h; sourceTree = "<group>"; };
+		CD011B2D22AF8E2A00E823E0 /* DeHTTPJsonInvalidParamterError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeHTTPJsonInvalidParamterError.m; sourceTree = "<group>"; };
+		CD283FBD22A8E07C00D46EEF /* DeSimpleXMLParaser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeSimpleXMLParaser.m; sourceTree = "<group>"; };
+		CD283FBE22A8E07C00D46EEF /* DeSimpleXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeSimpleXMLNode.m; sourceTree = "<group>"; };
+		CD283FBF22A8E07C00D46EEF /* DeSimpleXMLParaser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeSimpleXMLParaser.h; sourceTree = "<group>"; };
+		CD283FC022A8E07C00D46EEF /* DeSimpleXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeSimpleXMLNode.h; sourceTree = "<group>"; };
+		CD283FC622A8E13A00D46EEF /* DeHTTPNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeHTTPNetwork.h; sourceTree = "<group>"; };
+		CD283FC722A8E13A00D46EEF /* DeHTTPNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeHTTPNetwork.m; sourceTree = "<group>"; };
+		CD283FCA22A8E17C00D46EEF /* DeHTTPDataTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeHTTPDataTask.h; sourceTree = "<group>"; };
+		CD283FCB22A8E17C00D46EEF /* DeHTTPDataTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeHTTPDataTask.m; sourceTree = "<group>"; };
+		CD283FCE22A8E18900D46EEF /* DeHTTPOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeHTTPOperation.h; sourceTree = "<group>"; };
+		CD283FCF22A8E18900D46EEF /* DeHTTPOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeHTTPOperation.m; sourceTree = "<group>"; };
+		CD283FD222A9022000D46EEF /* DeHTTPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeHTTPManager.h; sourceTree = "<group>"; };
+		CD283FD322A9022000D46EEF /* DeHTTPManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeHTTPManager.m; sourceTree = "<group>"; };
+		CD283FD722A9042900D46EEF /* DeHTTPResponseSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeHTTPResponseSerializer.h; sourceTree = "<group>"; };
+		CD283FD822A9042900D46EEF /* DeHTTPResponseSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeHTTPResponseSerializer.m; sourceTree = "<group>"; };
+		CD283FDB22A9051C00D46EEF /* DeHTTPRequestSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeHTTPRequestSerializer.h; sourceTree = "<group>"; };
+		CD283FDC22A9051C00D46EEF /* DeHTTPRequestSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeHTTPRequestSerializer.m; sourceTree = "<group>"; };
+		CD4D19E922B88C96003A89CA /* DeSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeSignal.h; sourceTree = "<group>"; };
+		CD4D19EB22B88CA9003A89CA /* DeSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeSignal.m; sourceTree = "<group>"; };
+		CD4D19ED22B8B2F3003A89CA /* DeSubscribler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeSubscribler.h; sourceTree = "<group>"; };
+		CD4D19EE22B8B2F3003A89CA /* DeSubscribler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeSubscribler.m; sourceTree = "<group>"; };
+		CD4D19F622B8B4A5003A89CA /* DeDispose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeDispose.h; sourceTree = "<group>"; };
+		CD4D19F722B8B4A5003A89CA /* DeDispose.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeDispose.m; sourceTree = "<group>"; };
+		CD4D19FB22B8C36E003A89CA /* DeReact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeReact.h; sourceTree = "<group>"; };
+		CD4D19FD22B8C5CF003A89CA /* DeStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeStream.h; sourceTree = "<group>"; };
+		CD4D19FE22B8C5CF003A89CA /* DeStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeStream.m; sourceTree = "<group>"; };
+		CD4D1A0622B8CC3C003A89CA /* DeScheduler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeScheduler.h; sourceTree = "<group>"; };
+		CD4D1A0722B8CC3C003A89CA /* DeScheduler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeScheduler.m; sourceTree = "<group>"; };
+		CD4D1A0A22B9D13C003A89CA /* NSObject+DeDealloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DeDealloc.h"; sourceTree = "<group>"; };
+		CD4D1A0B22B9D13C003A89CA /* NSObject+DeDealloc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DeDealloc.m"; sourceTree = "<group>"; };
+		CD4D1A0E22B9F6A0003A89CA /* DeSubject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeSubject.h; sourceTree = "<group>"; };
+		CD4D1A0F22B9F6A0003A89CA /* DeSubject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeSubject.m; sourceTree = "<group>"; };
+		CD4EA99522A7610A0052FD9A /* Debugger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Debugger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4EA99822A7610A0052FD9A /* Debugger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Debugger.h; sourceTree = "<group>"; };
+		CD4EA99922A7610A0052FD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD4EA99E22A7610A0052FD9A /* DebuggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DebuggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4EA9A322A7610A0052FD9A /* DebuggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebuggerTests.m; sourceTree = "<group>"; };
+		CD4EA9A522A7610A0052FD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD4EA9C022A7679C0052FD9A /* DeFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeFileLogger.m; sourceTree = "<group>"; };
+		CD4EA9C122A7679C0052FD9A /* DeFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeFileLogger.h; sourceTree = "<group>"; };
+		CD4EA9C422A767D20052FD9A /* DeFileDirectory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeFileDirectory.h; sourceTree = "<group>"; };
+		CD4EA9C522A767D20052FD9A /* DeFileDirectory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeFileDirectory.m; sourceTree = "<group>"; };
+		CD4EA9CC22A789E60052FD9A /* DeProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeProxy.h; sourceTree = "<group>"; };
+		CD4EA9CD22A789E60052FD9A /* DeProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeProxy.m; sourceTree = "<group>"; };
+		CD7FDB2A22C30D1F0085D7D5 /* DeAsyncGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeAsyncGroup.h; sourceTree = "<group>"; };
+		CD7FDB2B22C30D1F0085D7D5 /* DeAsyncGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeAsyncGroup.m; sourceTree = "<group>"; };
+		CD7FDB2E22C30D270085D7D5 /* DeAsync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeAsync.h; sourceTree = "<group>"; };
+		CD7FDB2F22C30D270085D7D5 /* DeAsync.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeAsync.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD4EA99222A7610A0052FD9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4EA99B22A7610A0052FD9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4EA99F22A7610A0052FD9A /* Debugger.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD011B1422AF727900E823E0 /* reachable */ = {
+			isa = PBXGroup;
+			children = (
+				CD011B1522AF729100E823E0 /* DeReachable.h */,
+				CD011B1622AF729100E823E0 /* DeReachable.m */,
+			);
+			path = reachable;
+			sourceTree = "<group>";
+		};
+		CD011B1B22AF80C000E823E0 /* error */ = {
+			isa = PBXGroup;
+			children = (
+				CD011B1C22AF80DA00E823E0 /* DeHTTPNotReachableError.h */,
+				CD011B1D22AF80DA00E823E0 /* DeHTTPNotReachableError.m */,
+				CD011B2022AF81AB00E823E0 /* DeHTTPInvalidResponseError.h */,
+				CD011B2122AF81AB00E823E0 /* DeHTTPInvalidResponseError.m */,
+				CD011B2822AF8BF800E823E0 /* NSError+DeErrorMsg.h */,
+				CD011B2922AF8BF800E823E0 /* NSError+DeErrorMsg.m */,
+				CD011B2C22AF8E2A00E823E0 /* DeHTTPJsonInvalidParamterError.h */,
+				CD011B2D22AF8E2A00E823E0 /* DeHTTPJsonInvalidParamterError.m */,
+			);
+			path = error;
+			sourceTree = "<group>";
+		};
+		CD283FB022A8DF7D00D46EEF /* proxy */ = {
+			isa = PBXGroup;
+			children = (
+				CD4EA9CC22A789E60052FD9A /* DeProxy.h */,
+				CD4EA9CD22A789E60052FD9A /* DeProxy.m */,
+			);
+			path = proxy;
+			sourceTree = "<group>";
+		};
+		CD283FBC22A8E07C00D46EEF /* sax-xml */ = {
+			isa = PBXGroup;
+			children = (
+				CD283FC022A8E07C00D46EEF /* DeSimpleXMLNode.h */,
+				CD283FBE22A8E07C00D46EEF /* DeSimpleXMLNode.m */,
+				CD283FBF22A8E07C00D46EEF /* DeSimpleXMLParaser.h */,
+				CD283FBD22A8E07C00D46EEF /* DeSimpleXMLParaser.m */,
+			);
+			path = "sax-xml";
+			sourceTree = "<group>";
+		};
+		CD283FC522A8E11800D46EEF /* network */ = {
+			isa = PBXGroup;
+			children = (
+				CD011B1B22AF80C000E823E0 /* error */,
+				CD011B1422AF727900E823E0 /* reachable */,
+				CD283FC622A8E13A00D46EEF /* DeHTTPNetwork.h */,
+				CD283FC722A8E13A00D46EEF /* DeHTTPNetwork.m */,
+				CD283FCA22A8E17C00D46EEF /* DeHTTPDataTask.h */,
+				CD283FCB22A8E17C00D46EEF /* DeHTTPDataTask.m */,
+				CD283FCE22A8E18900D46EEF /* DeHTTPOperation.h */,
+				CD283FCF22A8E18900D46EEF /* DeHTTPOperation.m */,
+				CD283FD222A9022000D46EEF /* DeHTTPManager.h */,
+				CD283FD322A9022000D46EEF /* DeHTTPManager.m */,
+				CD283FD722A9042900D46EEF /* DeHTTPResponseSerializer.h */,
+				CD283FD822A9042900D46EEF /* DeHTTPResponseSerializer.m */,
+				CD283FDB22A9051C00D46EEF /* DeHTTPRequestSerializer.h */,
+				CD283FDC22A9051C00D46EEF /* DeHTTPRequestSerializer.m */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		CD4D19DB22B87E13003A89CA /* react */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D19FB22B8C36E003A89CA /* DeReact.h */,
+				CD4D1A0A22B9D13C003A89CA /* NSObject+DeDealloc.h */,
+				CD4D1A0B22B9D13C003A89CA /* NSObject+DeDealloc.m */,
+				CDBD4D1F22BA224F00DF1911 /* schedule */,
+				CDBD4D1E22BA222900DF1911 /* dispose */,
+				CDBD4D1D22BA221E00DF1911 /* subscrible */,
+				CDBD4D1B22BA220A00DF1911 /* stream */,
+			);
+			path = react;
+			sourceTree = "<group>";
+		};
+		CD4EA98B22A7610A0052FD9A = {
+			isa = PBXGroup;
+			children = (
+				CD4EA99722A7610A0052FD9A /* Debugger */,
+				CD4EA9A222A7610A0052FD9A /* DebuggerTests */,
+				CD4EA99622A7610A0052FD9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD4EA99622A7610A0052FD9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD4EA99522A7610A0052FD9A /* Debugger.framework */,
+				CD4EA99E22A7610A0052FD9A /* DebuggerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD4EA99722A7610A0052FD9A /* Debugger */ = {
+			isa = PBXGroup;
+			children = (
+				CD4EA9BA22A761E20052FD9A /* class */,
+				CD4EA9B922A761D70052FD9A /* categroy */,
+				CD4EA99822A7610A0052FD9A /* Debugger.h */,
+				CD4EA99922A7610A0052FD9A /* Info.plist */,
+			);
+			path = Debugger;
+			sourceTree = "<group>";
+		};
+		CD4EA9A222A7610A0052FD9A /* DebuggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD4EA9A322A7610A0052FD9A /* DebuggerTests.m */,
+				CD4EA9A522A7610A0052FD9A /* Info.plist */,
+			);
+			path = DebuggerTests;
+			sourceTree = "<group>";
+		};
+		CD4EA9B922A761D70052FD9A /* categroy */ = {
+			isa = PBXGroup;
+			children = (
+				CD011B0B22AF5E0600E823E0 /* NSArray+DeCategory.h */,
+				CD011B0C22AF5E0600E823E0 /* NSArray+DeCategory.m */,
+				CD011B0F22AF5E1B00E823E0 /* NSDictionary+DeCategory.h */,
+				CD011B1022AF5E1B00E823E0 /* NSDictionary+DeCategory.m */,
+			);
+			path = categroy;
+			sourceTree = "<group>";
+		};
+		CD4EA9BA22A761E20052FD9A /* class */ = {
+			isa = PBXGroup;
+			children = (
+				CD7FDB2922C30D0C0085D7D5 /* async */,
+				CD4D19DB22B87E13003A89CA /* react */,
+				CD283FC522A8E11800D46EEF /* network */,
+				CD283FBC22A8E07C00D46EEF /* sax-xml */,
+				CD283FB022A8DF7D00D46EEF /* proxy */,
+				CD4EA9BF22A7679C0052FD9A /* log */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		CD4EA9BF22A7679C0052FD9A /* log */ = {
+			isa = PBXGroup;
+			children = (
+				CD4EA9C122A7679C0052FD9A /* DeFileLogger.h */,
+				CD4EA9C022A7679C0052FD9A /* DeFileLogger.m */,
+				CD4EA9C422A767D20052FD9A /* DeFileDirectory.h */,
+				CD4EA9C522A767D20052FD9A /* DeFileDirectory.m */,
+			);
+			path = log;
+			sourceTree = "<group>";
+		};
+		CD7FDB2922C30D0C0085D7D5 /* async */ = {
+			isa = PBXGroup;
+			children = (
+				CD7FDB2A22C30D1F0085D7D5 /* DeAsyncGroup.h */,
+				CD7FDB2B22C30D1F0085D7D5 /* DeAsyncGroup.m */,
+				CD7FDB2E22C30D270085D7D5 /* DeAsync.h */,
+				CD7FDB2F22C30D270085D7D5 /* DeAsync.m */,
+			);
+			path = async;
+			sourceTree = "<group>";
+		};
+		CDBD4D1B22BA220A00DF1911 /* stream */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D1A0E22B9F6A0003A89CA /* DeSubject.h */,
+				CD4D1A0F22B9F6A0003A89CA /* DeSubject.m */,
+				CD4D19FD22B8C5CF003A89CA /* DeStream.h */,
+				CD4D19FE22B8C5CF003A89CA /* DeStream.m */,
+				CD4D19E922B88C96003A89CA /* DeSignal.h */,
+				CD4D19EB22B88CA9003A89CA /* DeSignal.m */,
+			);
+			path = stream;
+			sourceTree = "<group>";
+		};
+		CDBD4D1D22BA221E00DF1911 /* subscrible */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D19ED22B8B2F3003A89CA /* DeSubscribler.h */,
+				CD4D19EE22B8B2F3003A89CA /* DeSubscribler.m */,
+			);
+			path = subscrible;
+			sourceTree = "<group>";
+		};
+		CDBD4D1E22BA222900DF1911 /* dispose */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D19F622B8B4A5003A89CA /* DeDispose.h */,
+				CD4D19F722B8B4A5003A89CA /* DeDispose.m */,
+			);
+			path = dispose;
+			sourceTree = "<group>";
+		};
+		CDBD4D1F22BA224F00DF1911 /* schedule */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D1A0622B8CC3C003A89CA /* DeScheduler.h */,
+				CD4D1A0722B8CC3C003A89CA /* DeScheduler.m */,
+			);
+			path = schedule;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CD4EA99022A7610A0052FD9A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4EA9CE22A789E60052FD9A /* DeProxy.h in Headers */,
+				CD4EA9C622A767D20052FD9A /* DeFileDirectory.h in Headers */,
+				CD283FC422A8E07C00D46EEF /* DeSimpleXMLNode.h in Headers */,
+				CD283FC322A8E07C00D46EEF /* DeSimpleXMLParaser.h in Headers */,
+				CD283FD022A8E18900D46EEF /* DeHTTPOperation.h in Headers */,
+				CD283FCC22A8E17C00D46EEF /* DeHTTPDataTask.h in Headers */,
+				CD283FD922A9042900D46EEF /* DeHTTPResponseSerializer.h in Headers */,
+				CD011B1722AF729100E823E0 /* DeReachable.h in Headers */,
+				CD283FDD22A9051C00D46EEF /* DeHTTPRequestSerializer.h in Headers */,
+				CD283FD422A9022000D46EEF /* DeHTTPManager.h in Headers */,
+				CD283FC822A8E13A00D46EEF /* DeHTTPNetwork.h in Headers */,
+				CD011B0D22AF5E0600E823E0 /* NSArray+DeCategory.h in Headers */,
+				CD011B1122AF5E1B00E823E0 /* NSDictionary+DeCategory.h in Headers */,
+				CD011B1E22AF80DA00E823E0 /* DeHTTPNotReachableError.h in Headers */,
+				CD011B2E22AF8E2A00E823E0 /* DeHTTPJsonInvalidParamterError.h in Headers */,
+				CD011B2A22AF8BF800E823E0 /* NSError+DeErrorMsg.h in Headers */,
+				CD4D19EA22B88C96003A89CA /* DeSignal.h in Headers */,
+				CD011B2222AF81AB00E823E0 /* DeHTTPInvalidResponseError.h in Headers */,
+				CD4D1A0C22B9D13C003A89CA /* NSObject+DeDealloc.h in Headers */,
+				CD4D19F822B8B4A5003A89CA /* DeDispose.h in Headers */,
+				CD4D19FC22B8C36E003A89CA /* DeReact.h in Headers */,
+				CD4D19FF22B8C5CF003A89CA /* DeStream.h in Headers */,
+				CD4D19EF22B8B2F3003A89CA /* DeSubscribler.h in Headers */,
+				CD4EA9C322A7679C0052FD9A /* DeFileLogger.h in Headers */,
+				CD4D1A1022B9F6A0003A89CA /* DeSubject.h in Headers */,
+				CD7FDB2C22C30D1F0085D7D5 /* DeAsyncGroup.h in Headers */,
+				CD7FDB3022C30D270085D7D5 /* DeAsync.h in Headers */,
+				CD4D1A0822B8CC3C003A89CA /* DeScheduler.h in Headers */,
+				CD4EA9A622A7610A0052FD9A /* Debugger.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CD4EA99422A7610A0052FD9A /* Debugger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD4EA9A922A7610A0052FD9A /* Build configuration list for PBXNativeTarget "Debugger" */;
+			buildPhases = (
+				CD4EA99022A7610A0052FD9A /* Headers */,
+				CD4EA99122A7610A0052FD9A /* Sources */,
+				CD4EA99222A7610A0052FD9A /* Frameworks */,
+				CD4EA99322A7610A0052FD9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Debugger;
+			productName = Debugger;
+			productReference = CD4EA99522A7610A0052FD9A /* Debugger.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CD4EA99D22A7610A0052FD9A /* DebuggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD4EA9AC22A7610A0052FD9A /* Build configuration list for PBXNativeTarget "DebuggerTests" */;
+			buildPhases = (
+				CD4EA99A22A7610A0052FD9A /* Sources */,
+				CD4EA99B22A7610A0052FD9A /* Frameworks */,
+				CD4EA99C22A7610A0052FD9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD4EA9A122A7610A0052FD9A /* PBXTargetDependency */,
+			);
+			name = DebuggerTests;
+			productName = DebuggerTests;
+			productReference = CD4EA99E22A7610A0052FD9A /* DebuggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD4EA98C22A7610A0052FD9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = liu;
+				TargetAttributes = {
+					CD4EA99422A7610A0052FD9A = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					CD4EA99D22A7610A0052FD9A = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = CD4EA98F22A7610A0052FD9A /* Build configuration list for PBXProject "Debugger" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CD4EA98B22A7610A0052FD9A;
+			productRefGroup = CD4EA99622A7610A0052FD9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD4EA99422A7610A0052FD9A /* Debugger */,
+				CD4EA99D22A7610A0052FD9A /* DebuggerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD4EA99322A7610A0052FD9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4EA99C22A7610A0052FD9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD4EA99122A7610A0052FD9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4D1A0922B8CC3C003A89CA /* DeScheduler.m in Sources */,
+				CD4D19EC22B88CA9003A89CA /* DeSignal.m in Sources */,
+				CD011B2322AF81AB00E823E0 /* DeHTTPInvalidResponseError.m in Sources */,
+				CD283FD522A9022000D46EEF /* DeHTTPManager.m in Sources */,
+				CD011B2F22AF8E2A00E823E0 /* DeHTTPJsonInvalidParamterError.m in Sources */,
+				CD011B1F22AF80DA00E823E0 /* DeHTTPNotReachableError.m in Sources */,
+				CD011B0E22AF5E0600E823E0 /* NSArray+DeCategory.m in Sources */,
+				CD4D1A0D22B9D13C003A89CA /* NSObject+DeDealloc.m in Sources */,
+				CD4EA9C722A767D20052FD9A /* DeFileDirectory.m in Sources */,
+				CD4D19F022B8B2F3003A89CA /* DeSubscribler.m in Sources */,
+				CD283FC222A8E07C00D46EEF /* DeSimpleXMLNode.m in Sources */,
+				CD4D1A1122B9F6A0003A89CA /* DeSubject.m in Sources */,
+				CD283FC122A8E07C00D46EEF /* DeSimpleXMLParaser.m in Sources */,
+				CD011B1222AF5E1B00E823E0 /* NSDictionary+DeCategory.m in Sources */,
+				CD283FC922A8E13A00D46EEF /* DeHTTPNetwork.m in Sources */,
+				CD4D19F922B8B4A5003A89CA /* DeDispose.m in Sources */,
+				CD7FDB2D22C30D1F0085D7D5 /* DeAsyncGroup.m in Sources */,
+				CD4D1A0022B8C5CF003A89CA /* DeStream.m in Sources */,
+				CD283FDA22A9042900D46EEF /* DeHTTPResponseSerializer.m in Sources */,
+				CD011B1822AF729100E823E0 /* DeReachable.m in Sources */,
+				CD283FCD22A8E17C00D46EEF /* DeHTTPDataTask.m in Sources */,
+				CD011B2B22AF8BF800E823E0 /* NSError+DeErrorMsg.m in Sources */,
+				CD7FDB3122C30D270085D7D5 /* DeAsync.m in Sources */,
+				CD4EA9C222A7679C0052FD9A /* DeFileLogger.m in Sources */,
+				CD283FD122A8E18900D46EEF /* DeHTTPOperation.m in Sources */,
+				CD4EA9CF22A789E60052FD9A /* DeProxy.m in Sources */,
+				CD283FDE22A9051C00D46EEF /* DeHTTPRequestSerializer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4EA99A22A7610A0052FD9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4EA9A422A7610A0052FD9A /* DebuggerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD4EA9A122A7610A0052FD9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD4EA99422A7610A0052FD9A /* Debugger */;
+			targetProxy = CD4EA9A022A7610A0052FD9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CD4EA9A722A7610A0052FD9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CD4EA9A822A7610A0052FD9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CD4EA9AA22A7610A0052FD9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Debugger/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edaijia.debugger.Debugger;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD4EA9AB22A7610A0052FD9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Debugger/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edaijia.debugger.Debugger;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD4EA9AD22A7610A0052FD9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DebuggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edaijia.debugger.DebuggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD4EA9AE22A7610A0052FD9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DebuggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edaijia.debugger.DebuggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD4EA98F22A7610A0052FD9A /* Build configuration list for PBXProject "Debugger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4EA9A722A7610A0052FD9A /* Debug */,
+				CD4EA9A822A7610A0052FD9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD4EA9A922A7610A0052FD9A /* Build configuration list for PBXNativeTarget "Debugger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4EA9AA22A7610A0052FD9A /* Debug */,
+				CD4EA9AB22A7610A0052FD9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD4EA9AC22A7610A0052FD9A /* Build configuration list for PBXNativeTarget "DebuggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4EA9AD22A7610A0052FD9A /* Debug */,
+				CD4EA9AE22A7610A0052FD9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD4EA98C22A7610A0052FD9A /* Project object */;
+}
