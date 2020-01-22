@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, DeSchedulerQos) {
 @class DeDispose;
 @interface DeScheduler : NSObject
 
-@property (nonatomic, strong, readonly) dispatch_queue_t queue;
+@property (nonatomic, readonly) dispatch_queue_t queue;
 @property (nonatomic, copy, readonly) NSString *name;
 
 + (DeScheduler *)mainthreadScheduler;

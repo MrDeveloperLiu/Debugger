@@ -13,7 +13,7 @@ typedef dispatch_block_t (^DeAsyncGroupTaskBlock)(DeAsyncGroup *g);
 
 @interface DeAsyncGroup : NSObject
 
-@property (nonatomic, strong, readonly) dispatch_group_t group;
+@property (nonatomic, readonly) dispatch_group_t group;
 
 - (void)enter;
 - (void)leave;

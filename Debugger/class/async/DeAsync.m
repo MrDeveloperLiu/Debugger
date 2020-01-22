@@ -10,7 +10,7 @@
 
 @interface DeAsync ()
 @property (nonatomic, strong) DeAsyncGroup *group;
-@property (nonatomic, strong) dispatch_queue_t queue;
+@property (nonatomic) dispatch_queue_t queue;
 @end
 
 @implementation DeAsync

@@ -12,7 +12,7 @@
 #define DeSchedulerDeafaultName @"DeSchedulerDeafault"
 
 @interface DeScheduler ()
-@property (nonatomic, strong) dispatch_queue_t queue;
+@property (nonatomic) dispatch_queue_t queue;
 @property (nonatomic, copy) NSString *name;
 @end
 

@@ -29,7 +29,7 @@ FOUNDATION_EXPORT NSString *const DeHTTPManagerUserinfoTaskKey;
 @property (nonatomic, strong, readonly) DeReachable *reachablity;
 
 @property (nonatomic, strong, readonly) NSOperationQueue *queue;
-@property (nonatomic, strong) dispatch_queue_t processQueue;
+@property (nonatomic) dispatch_queue_t processQueue;
 
 @property (nonatomic, strong) DeHTTPResponseSerializer *responseSerializer;
 @property (nonatomic, strong) DeHTTPRequestSerializer *requestSerializer;
